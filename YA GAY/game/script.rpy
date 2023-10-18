@@ -364,7 +364,7 @@ label POSLE_PARI_PORKHA:
             jump WITH_PAZANI
         "Лучше пройду мимо":
             "~ Не стоит подходить, а то обознаюсь еще ~"
-            $ soqiofob -= 1
+            $ soqiofob += 1
             stop music fadeout(2.0)
             jump ODIN
 
