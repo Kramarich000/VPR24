@@ -1,68 +1,69 @@
-init python:
-    renpy.music.register_channel("bgs", "sfx", loop = True)
+init:
+    # Определение персонажей игры.
+    define b = Character('Борис', color="#FF1493")
+    define g = Character('Гоша', color="#0000CD")
+    define p = Character('Поркшеян', color="#FF1493")
+    define n = Character('Никита', color="#00FF00")
+    define z = Character('Женя', color="#FFFF00")
+    define a = Character('Арина', color="#FF00FF")
+    define a_s = Character('?Арина?', color="#FF0000")
+    define r = Character('Рома', color="#0000FF")
+    define s_s = Character('Серега', color="#FF0000")
+    define d = Character('Ваня', color="#0000CD")
+    define s = Character('Стас', color="#F4A460")
+    define i = Character('Иван Васильевич', сolor="0000CD")
+    define v = Character('Все', color="0000CD")
+    define author = Character('Автор', color="#FFFFFF")
+    # Задники:
+    image DGTU_BG_INSIDE = "bg/DGTU_BG_INSIDE.jpg"
+    image DGTU_BG_OUTSIDE = "bg/DGTU_BG_OUTSIDE.jpg"
+    image PARA_L = "bg/PARA_L.jpg"
+    image APELSIN = "bg/APELSIN.jpg"
+    image PARADISE = "bg/RAI.jpg"
+    image SEREGA_ZVONOK = "bg/SEREGA_ZVONOK.jpg"
+    image KORIDOR = "bg/KORIDOR.jpg"
+    image HELL = "bg/HELL.jpg"
+    image PROLOG_OCEAN = "bg/PROLOG_OCEAN.jpg"
+    image WAKE_UP = "bg/WAKE_UP.jpg"
+    image NA_ULIZE = "bg/NA_ULIZE.jpg"
+    image BLACK_SCREEN = "bg/BLACK_SCREEN.jpg"
+    image KABINET_DEKANA = "bg/KABINET_DEKANA.jpg"
+    image 1_319 = "bg/1_319.jpg"
+    image ODINOCHKA = "bg/ODINOCHKA.jpg"
 
+    # Спрайты боряна:
+    image BORYA_OUTSIDE = "sprites/BORYA/BORYA_OUTSIDE.png"
+    # Спрайты Гоги:
+    image GOGA_OUTSIDE = "sprites/GOGA/GOGA_OUTSIDE.png"
+    # Спрайты Поркша:
+    image VPORKSHEYAN = "sprites/PORKSH/VPORKSHEYAN.png"
+    # Спрайты Никиты:
+    image NIKITA_OUTSIDE = "sprites/NEKIT/NIKITA_OUTSIDE.png"
+    # Спрайты Арины:
+    image ARINA_OUTSIDE = "sprites/ARINA/ARINA_OUTSIDE.png"
+    image ARINA_SUCCUB = "sprites/ARINA/ARINA_SUCCUB.png"
+    # Спрайты Жени:
+    image ZHENYA_OUTSIDE = "sprites/ZHENYA/ZHENYA_OUTSIDE.png"
+    # Спрайты Ромы:
+    image ROMA_OUTSIDE = "sprites/ROMAN/ROMAN_OUTSIDE.png"
+    # Спрайты Сереги:
+    image SEREGA = "sprites/SEREGA/SEREGA.png"
+    # Спрайты Вани:
+    image DIVAN_SERIOUS = "sprites/DIVAN/DIVAN_SERIOUS.png"
+    image DIVAN_CRY = "sprites/DIVAN/DIVAN_CRY.png"
+    image DIVAN_SMILE = "sprites/DIVAN/DIVAN_SMILE.png"
 
-# Определение персонажей игры.
-define b = Character('Борис', color="#FF1493")
-define g = Character('Гоша', color="#0000CD")
-define p = Character('Поркшеян', color="#FF1493")
-define n = Character('Никита', color="#00FF00")
-define z = Character('Женя', color="#FFFF00")
-define a = Character('Арина', color="#FF00FF")
-define a_s = Character('?Арина?', color="#FF0000")
-define r = Character('Рома', color="#0000FF")
-define s_s = Character('Серега', color="#FF0000")
-define d = Character('Ваня', color="#0000CD")
-define s = Character('Стас', color="#F4A460")
-define i = Character('Иван Васильевич', сolor="0000CD")
-define v = Character('Все', color="0000CD")
-define author = Character('Автор', color="#FFFFFF")
-# Задники:
-image DGTU_BG_INSIDE = "bg/DGTU_BG_INSIDE.jpg"
-image DGTU_BG_OUTSIDE = "bg/DGTU_BG_OUTSIDE.jpg"
-image PARA_L = "bg/PARA_L.jpg"
-image APELSIN = "bg/APELSIN.jpgп"
-image PARADISE = "bg/RAI.jpg"
-image SEREGA_ZVONOK = "bg/SEREGA_ZVONOK.jpg"
-image KORIDOR = "bg/KORIDOR.jpg"
-image HELL = "bg/HELL.jpg"
-image PROLOG_OCEAN = "bg/PROLOG_OCEAN.jpg"
-image WAKE_UP = "bg/WAKE_UP.jpg"
-image NA_ULIZE = "bg/NA_ULIZE.jpg"
-image BLACK_SCREEN = "bg/BLACK_SCREEN.jpg"
-image KABINET_DEKANA = "bg/KABINET_DEKANA.jpg"
-image 1_319 = "bg/1_319.jpg"
-image ODINOCHKA = "bg/ODINOCHKA.jpg"
+    # Спрайты Ивана Васильевича:
+    image IVAN_VASILIICH = "sprites/IVAN_VASILIICH/IVAN_VASILIICH.png"
 
-# Спрайты боряна:
-image BORYA_OUTSIDE = "sprites/BORYA/BORYA_OUTSIDE.png"
-# Спрайты Гоги:
-image GOGA_OUTSIDE = "sprites/GOGA/GOGA_OUTSIDE.png"
-# Спрайты Поркша:
-image VPORKSHEYAN = "sprites/PORKSH/VPORKSHEYAN.png"
-# Спрайты Никиты:
-image NIKITA_OUTSIDE = "sprites/NEKIT/NIKITA_OUTSIDE.png"
-# Спрайты Арины:
-image ARINA_OUTSIDE = "sprites/ARINA/ARINA_OUTSIDE.png"
-image ARINA_SUCCUB = "sprites/ARINA/ARINA_SUCCUB.png"
-# Спрайты Жени:
-image ZHENYA_OUTSIDE = "sprites/ZHENYA/ZHENYA_OUTSIDE.png"
-# Спрайты Ромы:
-image ROMA_OUTSIDE = "sprites/ROMAN/ROMAN_OUTSIDE.png"
-# Спрайты Сереги:
-image SEREGA = "sprites/SEREGA/SEREGA.png"
-# Спрайты Вани:
-image DIVAN_SERIOUS = "sprites/DIVAN/DIVAN_SERIOUS.png"
-image DIVAN_CRY = "sprites/DIVAN/DIVAN_CRY.png"
-image DIVAN_SMILE = "sprites/DIVAN/DIVAN_SMILE.png"
+    default HP = 5
+    default uspevaemost = 0
+    default karma = 10
+    default soqiofob = 0
+    
+    python:
+        renpy.music.register_channel("bgs", "sfx", loop = True)
 
-# Спрайты Ивана Васильевича:
-image IVAN_VASILIICH = "sprites/IVAN_VASILIICH/IVAN_VASILIICH.png"
-
-default HP = 5
-default uspevaemost = 0
-default karma = 10
-default soqiofob = 0
 
 # Игра начинается здесь(пролог):
 label start:
@@ -105,6 +106,7 @@ label start:
     stop bgs
     hide NA_ULIZE
     show BLACK_SCREEN
+    with dissolve
     s "Так-с ну что же хех"
     hide BLACK_SCREEN
     show PROLOG_OCEAN
@@ -159,7 +161,6 @@ label start:
     stop bgs
     play sound "sounds/dgtu_zvon.mp3"
     s "Бля быстрее на 1 же пару опаздывать..."
-    hide DGTU_BG_INSIDE
     show 1_319
     s "Так это вроде тут"
     s "Заходим"
@@ -167,28 +168,25 @@ label start:
 
 label DGTU_OUTSIDE:
     play bgs "sounds/zvuki-na-ulice-goroda.mp3"
+    scene DGTU_BG_OUTSIDE
     show BLACK_SCREEN
     with dissolve
     "Тем временем...."
     hide BLACK_SCREEN
     with dissolve
-    scene DGTU_BG_OUTSIDE
     g "Боря где мы?"
     show GOGA_OUTSIDE at left
-    with dissolve
-    g "Че это за место?"
     show BORYA_OUTSIDE at right
     with dissolve
-    show NIKITA_OUTSIDE at center
-    hide NIKITA_OUTSIDE
-    show DIVAN_SMILE
+    g "Че это за место?"
     b "Это же ДГТУ"
     g "О Ванек дарова"
     show DIVAN_SMILE
+    with dissolve
     d "Дарова"
     menu:
-        d "Бля погнали на апель покурим"
-        "Погнали курить":
+        d "Бля, Женя, погнали на апель покурим"
+        "Погнали хули":
             jump apelsin
         "Нет, пара скоро":
             pass
@@ -286,7 +284,8 @@ label NA_PARE_PORKHA:
         "Уснуть":
             "Чтобы продемонстрировать вам..."
             $ uspevaemost -= 1
-            show BLACK_SCREEN
+            show BLACK_SCREEN 
+            with dissolve
             "..."
             "..."
             "..."
@@ -319,7 +318,8 @@ label NA_PARE_PORKHA:
     jump POSLE_PARI_PORKHA
 
 label POSLE_PARI_PORKHA:
-    scene KORIDOR
+    scene KORIDOR 
+    with dissolve
     play music "sounds/Universitet.mp3"
     "~ Выйдя из аудитории я увидел нескольких ребят ~"
     show GOGA_OUTSIDE
@@ -338,18 +338,18 @@ label POSLE_PARI_PORKHA:
             z "У нас 10 минут еще есть"
             hide GOGA_OUTSIDE
             with dissolve
-            show DIVAN_SERIOUS at center
+            show DIVAN_SMILE at center
             with dissolve
             d "А ахуенно Женя го курить"
-            show ZHENYA_OUTSIDE at right
+            show ZHENYA_OUTSIDE at right 
             with dissolve
             z "Ебать погнали!"
-            hide ZHENYA_OUTSIDE
+            hide ZHENYA_OUTSIDE 
             with dissolve
-            hide DIVAN
+            hide DIVAN_SMILE
             with dissolve
             "Женя с Ваней ушли на апель"
-            show GOGA_OUTSIDE
+            show GOGA_OUTSIDE with dissolve
             g "Пойдемте иначе опоздаем"
             s "Эй, ребят вы ВПР24?"
             g "Да, а что ты хотел?"
