@@ -21,7 +21,7 @@ define author = Character('Автор', color="#FFFFFF")
 image DGTU_BG_INSIDE = "bg/DGTU_BG_INSIDE.jpg"
 image DGTU_BG_OUTSIDE = "bg/DGTU_BG_OUTSIDE.jpg"
 image PARA_L = "bg/PARA_L.jpg"
-image APELSIN = "bg/APELSIN.jpgп"
+image APELSIN = "bg/APELSIN.jpg"
 image PARADISE = "bg/RAI.jpg"
 image SEREGA_ZVONOK = "bg/SEREGA_ZVONOK.jpg"
 image KORIDOR = "bg/KORIDOR.jpg"
@@ -105,6 +105,7 @@ label start:
     stop bgs
     hide NA_ULIZE
     show BLACK_SCREEN
+    with dissolve
     s "Так-с ну что же хех"
     hide BLACK_SCREEN
     show PROLOG_OCEAN
@@ -159,7 +160,6 @@ label start:
     stop bgs
     play sound "sounds/dgtu_zvon.mp3"
     s "Бля быстрее на 1 же пару опаздывать..."
-    hide DGTU_BG_INSIDE
     show 1_319
     s "Так это вроде тут"
     s "Заходим"
@@ -167,24 +167,21 @@ label start:
 
 label DGTU_OUTSIDE:
     play bgs "sounds/zvuki-na-ulice-goroda.mp3"
+    scene DGTU_BG_OUTSIDE
     show BLACK_SCREEN
     with dissolve
     "Тем временем...."
     hide BLACK_SCREEN
     with dissolve
-    scene DGTU_BG_OUTSIDE
     g "Боря где мы?"
     show GOGA_OUTSIDE at left
-    with dissolve
-    g "Че это за место?"
     show BORYA_OUTSIDE at right
     with dissolve
-    show NIKITA_OUTSIDE at center
-    hide NIKITA_OUTSIDE
-    show DIVAN_SMILE
+    g "Че это за место?"
     b "Это же ДГТУ"
     g "О Ванек дарова"
     show DIVAN_SMILE
+    with dissolve
     d "Дарова"
     menu:
         d "Бля погнали на апель покурим"
@@ -286,7 +283,8 @@ label NA_PARE_PORKHA:
         "Уснуть":
             "Чтобы продемонстрировать вам..."
             $ uspevaemost -= 1
-            show BLACK_SCREEN
+            show BLACK_SCREEN 
+            with dissolve
             "..."
             "..."
             "..."
@@ -319,7 +317,8 @@ label NA_PARE_PORKHA:
     jump POSLE_PARI_PORKHA
 
 label POSLE_PARI_PORKHA:
-    scene KORIDOR
+    scene KORIDOR 
+    with dissolve
     play music "sounds/Universitet.mp3"
     "~ Выйдя из аудитории я увидел нескольких ребят ~"
     show GOGA_OUTSIDE
@@ -338,18 +337,18 @@ label POSLE_PARI_PORKHA:
             z "У нас 10 минут еще есть"
             hide GOGA_OUTSIDE
             with dissolve
-            show DIVAN_SERIOUS at center
+            show DIVAN_SMILE at center
             with dissolve
             d "А ахуенно Женя го курить"
-            show ZHENYA_OUTSIDE at right
+            show ZHENYA_OUTSIDE at right 
             with dissolve
             z "Ебать погнали!"
-            hide ZHENYA_OUTSIDE
+            hide ZHENYA_OUTSIDE 
             with dissolve
-            hide DIVAN
+            hide DIVAN_SMILE
             with dissolve
             "Женя с Ваней ушли на апель"
-            show GOGA_OUTSIDE
+            show GOGA_OUTSIDE with dissolve
             g "Пойдемте иначе опоздаем"
             s "Эй, ребят вы ВПР24?"
             g "Да, а что ты хотел?"
