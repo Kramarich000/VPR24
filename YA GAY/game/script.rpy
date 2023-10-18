@@ -14,6 +14,11 @@ init:
     define i = Character('Иван Васильевич', сolor="#1b2780")
     define v = Character('Все', color="#ffffff")
     define author = Character('Автор', color="#FFFFFF")
+
+    #Нестандартные позиции персонажей
+    define left2 = Position(xalign=0.25)
+    define right2 = Position(xalign=0.75)
+
     # Задники:
     image DGTU_BG_INSIDE = "bg/DGTU_BG_INSIDE.jpg"
     image DGTU_BG_OUTSIDE = "bg/DGTU_BG_OUTSIDE.jpg"
@@ -44,8 +49,6 @@ init:
     image ARINA_SUCCUB = "sprites/ARINA/ARINA_SUCCUB.png"
     # Спрайты Жени:
     image ZHENYA_OUTSIDE = "sprites/ZHENYA/ZHENYA_OUTSIDE.png"
-    # Спрайты Ромы:
-    image ROMA_OUTSIDE = "sprites/ROMAN/ROMAN_OUTSIDE.png"
     # Спрайты Сереги:
     image SEREGA = "sprites/SEREGA/SEREGA.png"
     # Спрайты Вани:
@@ -175,13 +178,15 @@ label DGTU_OUTSIDE:
     hide BLACK_SCREEN
     with dissolve
     g "Боря где мы?"
-    show GOGA_OUTSIDE at left
-    show BORYA_OUTSIDE at right
+    show GOGA_OUTSIDE at left2
+    show BORYA_OUTSIDE at right2
     with dissolve
     g "Че это за место?"
     b "Это же ДГТУ"
     g "О Ванек дарова"
-    show DIVAN_SMILE
+    show DIVAN_SMILE at center
+    show GOGA_OUTSIDE at left
+    show BORYA_OUTSIDE at right
     with dissolve
     d "Дарова"
     menu:
@@ -192,27 +197,23 @@ label DGTU_OUTSIDE:
             pass
     hide DIVAN_SMILE
     hide NIKITA_OUTSIDE
-    show NIKITA_OUTSIDE at left
+    show NIKITA_OUTSIDE at left2
     with dissolve
     n "Всем здарова челики аче вы не на паре?"
     n "Пойдемте а то опоздаем"
-    show ZHENYA_OUTSIDE at center
+    show ZHENYA_OUTSIDE at right2
     with dissolve
     z "Бля я ебал 60 заказов хуярить погнали уже"
     z "Староста пойдем уже"
-    hide ZHENYA_OUTSIDE
-    show ARINA_OUTSIDE
+    show ARINA_OUTSIDE at center
     with dissolve
     a "Да блять не называйте меня старостой!"
-    hide ARINA_OUTSIDE
     stop music fadeout(2.0)
     stop bgs fadeout(2.0)
-    show ROMA_OUTSIDE
-    with dissolve
-    r "Хай ВПР!"
-    hide ROMA_OUTSIDE
     hide NIKITA_OUTSIDE
     hide BORYA_OUTSIDE
+    hide ZHENYA_OUTSIDE
+    hide ARINA_OUTSIDE
     show GOGA_OUTSIDE at center
     with dissolve
     g "Я думаю нам пора"
@@ -323,9 +324,7 @@ label POSLE_PARI_PORKHA:
     play music "sounds/Universitet.mp3"
     "~ Выйдя из аудитории я увидел нескольких ребят ~"
     show GOGA_OUTSIDE
-    with dissolve
     show ZHENYA_OUTSIDE at right
-    with dissolve
     show BORYA_OUTSIDE at left
     with dissolve
     menu:
@@ -373,9 +372,10 @@ label ODIN:
     play music "sounds/Universitet.mp3"
     "~ Так-с аудитория 8- ~"
     "~ Ага, нашел! Вроде не опоздал ~"
-    show GOGA_OUTSIDE at right
-    show BORYA_OUTSIDE at left
-    "~ Хм, у этих ребят видимо, пара здесь же, может стоило подойти к ним?"
+    show GOGA_OUTSIDE at right2
+    show BORYA_OUTSIDE at left2
+    with dissolve
+    "~ Хм, у этих ребят видимо, пара здесь же, может стоило подойти к ним? ~"
     "~ Только их вроде было четверо ... ~"
     "..."
     "~ В любом случае времени на это уже нет ~"
