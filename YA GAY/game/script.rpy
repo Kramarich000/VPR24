@@ -178,13 +178,15 @@ label DGTU_OUTSIDE:
     hide BLACK_SCREEN
     with dissolve
     g "Боря где мы?"
-    show GOGA_OUTSIDE at left
-    show BORYA_OUTSIDE at right
+    show GOGA_OUTSIDE at left2
+    show BORYA_OUTSIDE at right2
     with dissolve
     g "Че это за место?"
     b "Это же ДГТУ"
     g "О Ванек дарова"
-    show DIVAN_SMILE
+    show DIVAN_SMILE at center
+    show GOGA_OUTSIDE at left
+    show BORYA_OUTSIDE at right
     with dissolve
     d "Дарова"
     menu:
@@ -370,8 +372,9 @@ label ODIN:
     play music "sounds/Universitet.mp3"
     "~ Так-с аудитория 8- ~"
     "~ Ага, нашел! Вроде не опоздал ~"
-    show GOGA_OUTSIDE at right
-    show BORYA_OUTSIDE at left
+    show GOGA_OUTSIDE at right2
+    show BORYA_OUTSIDE at left2
+    with dissolve
     "~ Хм, у этих ребят видимо, пара здесь же, может стоило подойти к ним? ~"
     "~ Только их вроде было четверо ... ~"
     "..."
