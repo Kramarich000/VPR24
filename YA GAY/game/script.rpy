@@ -236,17 +236,18 @@ label in_DGTU:
     show BORYA_OUTSIDE
     with dissolve
     b "УХ нихуя мы внутри)"
-    hide BORYA_OUTSIDE
-    show GOGA_OUTSIDE
+    show GOGA_OUTSIDE at left
     with dissolve
     g "Ага давай быстрей а то опоздаем на пару"
     stop bgs fadeout(2.0)
     play sound "sounds/dgtu_zvon.mp3"
     hide GOGA_OUTSIDE
+    hide BORYA_OUTSIDE
     show ZHENYA_OUTSIDE
     with dissolve
     z "Бля погодите я карту найти не могу"
-    # Спрайт Арины
+    show ARINA_OUTSIDE at right2
+    with dissolve
     a "Да пошли уже задолбал"
     stop sound fadeout(3.0)
     jump NA_PARE_PORKHA
