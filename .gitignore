@@ -1323,3 +1323,7 @@ YA GAY/errors.txt
 YA GAY/log.txt
 YA GAY/traceback.txt
 YA GAY/game/saves/
+YA GAY/game/cache/bytecode-39.rpyb
+YA GAY/game/cache/screens.rpyb
+YA GAY/game/cache/shaders.txt
+YA GAY/game/script.rpyc
