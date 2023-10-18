@@ -1,18 +1,18 @@
 init:
     # Определение персонажей игры.
-    define b = Character('Борис', color="#FF1493")
-    define g = Character('Гоша', color="#0000CD")
-    define p = Character('Поркшеян', color="#FF1493")
-    define n = Character('Никита', color="#00FF00")
+    define b = Character('Борис', color="#16005d")
+    define g = Character('Гоша', color="#0000ff")
+    define p = Character('Поркшеян', color="#ff0000")
+    define n = Character('Никита', color="#eeff00")
     define z = Character('Женя', color="#FFFF00")
-    define a = Character('Арина', color="#FF00FF")
+    define a = Character('Арина', color="#ff008c")
     define a_s = Character('?Арина?', color="#FF0000")
     define r = Character('Рома', color="#0000FF")
-    define s_s = Character('Серега', color="#FF0000")
+    define s_s = Character('Серега', color="#2200ff")
     define d = Character('Ваня', color="#0000CD")
     define s = Character('Стас', color="#F4A460")
-    define i = Character('Иван Васильевич', сolor="0000CD")
-    define v = Character('Все', color="0000CD")
+    define i = Character('Иван Васильевич', сolor="#1b2780")
+    define v = Character('Все', color="#ffffff")
     define author = Character('Автор', color="#FFFFFF")
 
     #Нестандартные позиции персонажей
