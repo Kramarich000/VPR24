@@ -15,6 +15,9 @@ init:
     define v = Character('Все', color="#ffffff")
     define author = Character('Автор', color="#FFFFFF")
 
+    # Курсор
+    define config.mouse = {"default" : [("gui/cursor.png", 0, 0)]}
+
     # Нестандартные позиции персонажей
     define left2 = Position(xalign=0.25)
     define right2 = Position(xalign=0.75)
