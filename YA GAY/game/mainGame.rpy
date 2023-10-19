@@ -213,12 +213,11 @@ label DGTU_OUTSIDE:
     d "Дарова че вы тут стоите?"
     g "Как-никак тебя ждем"
     d "А пара скоро?"
-    d "Да пофиг..."
-    b "Ага пофиг у тебя мало того что долг, так еще и посещаемость хромает"
-    g "Вот именно так что пойдем"
-    d "Ладно...на ковер к Поркшу не особо хочется"
-    hide DIVAN_SMILE
-    hide NIKITA_OUTSIDE
+    b "Да вот через..."
+    d "Да пофиг, я курить. Если что я опоздаю!"
+    b "Ага пофиг у тебя мало того что долг, так еще и посещаемость решил \"исправить\"?"
+    g "Вот именно так что никаких курить. Пойдем. У нас теорвер"
+    d "Ладно... На ковер к Поркшу не особо хочется..."
     show NIKITA_OUTSIDE at left2
     with dissolve
     n "Всем здарова челики аче вы не на паре?"
@@ -227,6 +226,7 @@ label DGTU_OUTSIDE:
     with dissolve
     z "Я уже устал 60 заказов в день, сдохну скоро"
     z "Староста пойдем уже"
+    hide DIVAN_SMILE
     show ARINA_OUTSIDE at center
     with dissolve
     a "Да задолбали, не называйте меня старостой!"
@@ -284,7 +284,10 @@ label SEREGA_ZVONIT:
 
 label NA_PARE_PORKHA:
     scene PARA_L
-    "От лица Стаса"
+    show BLACK_SCREEN
+    with dissolve
+    "В это время в 1-319..."
+    hide BLACK_SCREEN
     show VPORKSHEYAN
     with dissolve
     play sound "sounds/DELTA_SHTRIX.mp3"
@@ -318,7 +321,7 @@ label NA_PARE_PORKHA:
             show PARA_L
             with dissolve
             s "Ой что уже все что-ли?"
-            s "Так нужно бы 'своих' для начала найти. Познакомиться хоть"
+            s "Так нужно бы \"своих\" для начала найти. Познакомиться хоть"
             stop bgs fadeout(1.0)
         "Внимательно слушать":
             $ uspevaemost += 1
@@ -361,9 +364,7 @@ label POSLE_PARI_PORKHA:
             with dissolve
             show DIVAN_SMILE at center
             with dissolve
-            d "А тогда Женя го курить"
-            show ZHENYA_OUTSIDE at right 
-            with dissolve
+            d "О! Получается мы с Женей идем курить?!"
             z "Погнали!"
             hide ZHENYA_OUTSIDE 
             with dissolve
@@ -371,7 +372,7 @@ label POSLE_PARI_PORKHA:
             with dissolve
             "Женя с Ваней ушли на апель"
             show GOGA_OUTSIDE with dissolve
-            g "Пойдемте иначе опоздаем"
+            g "Идем, иначе опоздаем"
             s "Эй, ребят вы ВПР24?"
             g "Да, а что ты хотел?"
             s "О значит мне по адресу, меня зовут Станислав, можно просто - Стас"
@@ -379,8 +380,11 @@ label POSLE_PARI_PORKHA:
             g "Меня если что Гоша зовут"
             g "Это Борис"
             b "Дарова я да"
-            g "А это Ва...а они же на апель пошли"
-            g "Ууу нам в 8 корпус...пойдемте быстрее иначе опоздаем"
+            g "А это Ва..."
+            g "О..."
+            g "Они уже свалили"
+            g "..."
+            g "Ууу нам в 8 корпус... Идем скорее, иначе опоздаем"
             stop music fadeout(2.0)
             jump WITH_PAZANI
         "Лучше пройду мимо":
