@@ -96,7 +96,7 @@ label start:
     show WAKE_UP
     with dissolve
     stop bgs
-    play music "music/Мышь - Жвачка.mp3"
+    play music "music/Мышь - Жвачка.mp3" fadein(2.0)
     "..."
     "Ой-ой-ой моя голова..."
     "8 УТРА ?"
@@ -361,7 +361,7 @@ label NA_PARE_PORKHA:
             play sound "sounds/dgtu_zvon.mp3"
             s "Неужели, я думал усну епт"
             s "Так нужно бы 'своих' для начала найти. Познакомиться хоть"
-            stop bgs 
+            stop bgs fadeout(2.0)
     jump POSLE_PARI_PORKHA
 
 label POSLE_PARI_PORKHA:
