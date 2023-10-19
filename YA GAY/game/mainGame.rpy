@@ -79,10 +79,10 @@ init:
 # Игра начинается здесь(пролог):
 label start:
     scene PROLOG_OCEAN
+    play music "music/neheart_-_snowfall_75941790.mp3"
     nvle "Так это тест nvla"
     nvle "блаблабла"
     p "Привет я поркш ебать"
-    play music "music/neheart_-_snowfall_75941790.mp3"
     author "Что есть жизнь?"
     author "Жизнь - это дар, что бы познавать себя и знать, как сотворить прекрасное для своей души, которая способна жить, перемещаясь в любые измерения, где есть жизнь."
     author "А душа - это что?"
@@ -368,7 +368,7 @@ label NA_PARE_PORKHA:
             play sound "sounds/dgtu_zvon.mp3"
             s "Неужели, я думал усну епт"
             s "Так нужно бы 'своих' для начала найти. Познакомиться хоть"
-            stop bgs fadeout(2.0)
+            stop sound fadeout(2.0)
     jump POSLE_PARI_PORKHA
 
 label POSLE_PARI_PORKHA:
