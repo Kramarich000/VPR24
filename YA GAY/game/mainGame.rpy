@@ -321,7 +321,7 @@ label NA_PARE_PORKHA:
             show PARA_L
             with dissolve
             s "Ой что уже все что-ли?"
-            s "Так нужно бы 'своих' для начала найти. Познакомиться хоть"
+            s "Так нужно бы \"своих\" для начала найти. Познакомиться хоть"
             stop bgs fadeout(1.0)
         "Внимательно слушать":
             $ uspevaemost += 1
@@ -365,8 +365,6 @@ label POSLE_PARI_PORKHA:
             show DIVAN_SMILE at center
             with dissolve
             d "О! Получается мы с Женей идем курить?!"
-            show ZHENYA_OUTSIDE at right 
-            with dissolve
             z "Погнали!"
             hide ZHENYA_OUTSIDE 
             with dissolve
@@ -374,7 +372,7 @@ label POSLE_PARI_PORKHA:
             with dissolve
             "Женя с Ваней ушли на апель"
             show GOGA_OUTSIDE with dissolve
-            g "Пойдемте иначе опоздаем"
+            g "Идем, иначе опоздаем"
             s "Эй, ребят вы ВПР24?"
             g "Да, а что ты хотел?"
             s "О значит мне по адресу, меня зовут Станислав, можно просто - Стас"
