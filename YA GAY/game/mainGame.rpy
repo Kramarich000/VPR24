@@ -448,8 +448,6 @@ label SECOND_PARA:
     show Какой-то_Препод at right
     with dissolve
     "Какой-то Препод" "Так, ребята. Все на места. Пара началась"
-    ""
-    ""
 
     return
 
