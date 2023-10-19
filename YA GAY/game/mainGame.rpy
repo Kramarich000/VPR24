@@ -1,21 +1,24 @@
 init:
     # Определение персонажей игры.
-    define b = Character('Борис', color="#16005d")
-    define g = Character('Гоша', color="#0000ff")
+    define b = Character('Борис', color="#3c00ff")
+    define g = Character('Гоша', color="#ccff00e0")
     define p = Character('Поркшеян', color="#ff0000")
     define n = Character('Никита', color="#eeff00")
     define z = Character('Женя', color="#FFFF00")
     define a = Character('Арина', color="#ff008c")
     define a_s = Character('?Арина?', color="#FF0000")
-    define r = Character('Рома', color="#0000FF")
-    define s_s = Character('Серега', color="#2200ff")
-    define d = Character('Ваня', color="#0000CD")
+    define r = Character('Рома', color="#ffffff")
+    define s_s = Character('Серега', color="#26ff00")
+    define d = Character('Ваня', color="#8000ff")
     define s = Character('Стас', color="#F4A460")
     define i = Character('Иван Васильевич', сolor="#1b2780")
     define v = Character('Все', color="#ffffff")
     define author = Character('Автор', color="#FFFFFF")
 
-    #Нестандартные позиции персонажей
+    # Курсор
+    define config.mouse = {"default" : [("gui/cursor.png", 0, 0)]}
+
+    # Нестандартные позиции персонажей
     define left2 = Position(xalign=0.25)
     define right2 = Position(xalign=0.75)
 
@@ -35,6 +38,9 @@ init:
     image KABINET_DEKANA = "bg/KABINET_DEKANA.jpg"
     image 1_319 = "bg/1_319.jpg"
     image ODINOCHKA = "bg/ODINOCHKA.jpg"
+    image PARA_2 = "bg/PARA_2.jpg"
+    image PARA_2 = "bg/PARA_2.jpg"
+    image PARA_KOMP = "bg/PARA_KOMP.jpg"
 
     # Спрайты боряна:
     image BORYA_OUTSIDE = "sprites/BORYA/BORYA_OUTSIDE.png"
@@ -93,15 +99,21 @@ label start:
     with dissolve
     stop bgs
     play music "music/Мышь - Жвачка.mp3"
-    s "Бля ебучий понедельник сука"
-    s "Ой блять моя голова ебаный рот че вчера было то?"
-    s "Бля уже 8 утра Я ЩАС ОПОЗДАЮЮ НАХУЙУУУУУУУУУЙ"
+    "..."
+    "Ой-ой-ой моя голова..."
+    "8 УТРА ?"
+    "..."
+    "Понедельник..."
+    "Так..."
+    "ТВОЮ МАТЬ! У меня же сегодня учеба!"
+    "Щас еще опоздаю и буду отчислен еще даже не придя ни на одну пару...бегом!"
     "Стас взял пропуск и вышел из общаги"
     hide WAKE_UP
     show NA_ULIZE
     with dissolve
     stop music
     play bgs "sounds/zvuki-na-ulice-goroda.mp3"
+    s "Быстрей быстрей идем на взлет!"
     s "Так 1 корпус..."
     s "..."
     s "Ага! Аудитория 319"
@@ -138,7 +150,15 @@ label start:
     s "Я хочу перевестись..."
     i "Почему? Тебя что-то не устраивает?"
     s "Ну нет, но...в общем да меня не устраивает мое текущее положение"
-    i "Эх, не могу я тебя держать, хорошо Станислав иди, я подготовлю документы"
+    i "Есть ли какая-то веская причина твоего решения?"
+    s "Иван Васильевич, сейчас у меня сложный период в жизни"
+    i "Может быть я могу чем-то помочь? У меня есть знакомый психолог хороший, можешь ему высказаться, тебе полегчает"
+    s "Нет, простите со мной все в порядке, меня просто...."
+    s "...напрягает что на меня давят родители и сейчас..."
+    s "И сейчас я в сложной жизненной ситуации, пожалуйста войдите в мое положение прошу вас"
+    i "Эх...Станислав ты хорошо учишься так что я сделаю исключение для тебя"
+    s "Спасибо!"
+    i "Я подготовлю документы"
     s "Хорошо, спасибо вам"
     hide IVAN_VASILIICH
     hide KABINET_DEKANA
@@ -146,6 +166,9 @@ label start:
     with dissolve
     play music "music/neheart_Reidenshi_-_distorted_memories_75718831.mp3"
     s "Итак, я оказался в группе ВПР24..."
+    s "Не знаю верный ли был это выбор, но..."
+    s "...уже выбора точно нет"
+    s "Так что вперед и с песней!"
     s "Надеюсь, что со второго раза мне повезет!"
     author "А может и нет)"
     hide PROLOG_OCEAN
@@ -154,17 +177,20 @@ label start:
     with dissolve
     play bgs "sounds/zvuki-na-ulice-goroda.mp3"
     s "Черт, надо спешить"
-    s "Опаздываю сука"
+    s "Опаздываю"
     stop bgs
     show DGTU_BG_INSIDE
     with dissolve
     play bgs "sounds/turniket.mp3"
-    s "Так давай же долбанный турникет!"
+    s "Так пропуск, где же ты"
+    s "Ага нашел!"
+    s "Давай же долбанный турникет!"
+    s "Есть!"
     s "3 этаж..."
     stop bgs
     play sound "sounds/dgtu_zvon.mp3"
-    s "Бля быстрее на 1 же пару опаздывать..."
-    show 1_319
+    s "Твою мать быстрее на 1 же пару опаздывать..."
+    show PARA_L
     s "Так это вроде тут"
     s "Заходим"
     jump DGTU_OUTSIDE
@@ -177,37 +203,36 @@ label DGTU_OUTSIDE:
     "Тем временем...."
     hide BLACK_SCREEN
     with dissolve
-    g "Боря где мы?"
+    g "Боря быстрей мы сейчас опоздаем, нас Поркш убьёт"
     show GOGA_OUTSIDE at left2
     show BORYA_OUTSIDE at right2
     with dissolve
-    g "Че это за место?"
-    b "Это же ДГТУ"
+    b "Да иду я уже"
     g "О Ванек дарова"
     show DIVAN_SMILE at center
     show GOGA_OUTSIDE at left
     show BORYA_OUTSIDE at right
     with dissolve
-    d "Дарова"
-    menu:
-        d "Бля, Женя, погнали на апель покурим"
-        "Погнали хули":
-            jump apelsin
-        "Нет, пара скоро":
-            pass
-    hide DIVAN_SMILE
-    hide NIKITA_OUTSIDE
+    d "Дарова че вы тут стоите?"
+    g "Как-никак тебя ждем"
+    d "А пара скоро?"
+    b "Да вот через..."
+    d "Да пофиг, я курить. Если что я опоздаю!"
+    b "Ага пофиг у тебя мало того что долг, так еще и посещаемость решил \"исправить\"?"
+    g "Вот именно так что никаких курить. Пойдем. У нас теорвер"
+    d "Ладно... На ковер к Поркшу не особо хочется..."
     show NIKITA_OUTSIDE at left2
     with dissolve
     n "Всем здарова челики аче вы не на паре?"
     n "Пойдемте а то опоздаем"
     show ZHENYA_OUTSIDE at right2
     with dissolve
-    z "Бля я ебал 60 заказов хуярить погнали уже"
+    z "Я уже устал 60 заказов в день, сдохну скоро"
     z "Староста пойдем уже"
+    hide DIVAN_SMILE
     show ARINA_OUTSIDE at center
     with dissolve
-    a "Да блять не называйте меня старостой!"
+    a "Да задолбали, не называйте меня старостой!"
     stop music fadeout(2.0)
     stop bgs fadeout(2.0)
     hide NIKITA_OUTSIDE
@@ -216,16 +241,16 @@ label DGTU_OUTSIDE:
     hide ARINA_OUTSIDE
     show GOGA_OUTSIDE at center
     with dissolve
-    g "Я думаю нам пора"
+    g "Я думаю нам пора, пойдем"
     jump in_DGTU
 
 label apelsin:
     scene APELSIN
     show ZHENYA_OUTSIDE
     with dissolve
-    z "Бля ебать чарон каличный"
+    z "Гарик поймал..."
     play bgs "sounds/TELEPHONE_ZVONOK.mp3"
-    z "Сука Серега звонит"
+    z "Опа-а...Серега звонит"
     "Женя поднимает телефон и включает видеозвонок"
     stop bgs
     jump SEREGA_ZVONIT
@@ -235,7 +260,7 @@ label in_DGTU:
     play bgs "sounds/turniket.mp3"
     show BORYA_OUTSIDE
     with dissolve
-    b "УХ нихуя мы внутри)"
+    b "Ух мы внутри"
     hide BORYA_OUTSIDE
     show GOGA_OUTSIDE
     with dissolve
@@ -245,7 +270,7 @@ label in_DGTU:
     hide GOGA_OUTSIDE
     show ZHENYA_OUTSIDE
     with dissolve
-    z "Бля погодите я карту найти не могу"
+    z "Погодите я карту найти не могу"
     # Спрайт Арины
     a "Да пошли уже задолбал"
     stop sound fadeout(3.0)
@@ -254,15 +279,18 @@ label in_DGTU:
 label SEREGA_ZVONIT:
     scene SEREGA_ZVONOK
     play sound "sounds/ueban.mp3"
-    s_s "АЛЕ УЕБИЩЕ ЕБАНОЕ где ты?"
-    z "Блять че уже пара началась?"
-    s_s "Ты долбоеб она уже 5 минут как идет бегом!"
-    z "Ладно заебал иду уже"
+    s_s "АЛЕ идиот где ты?"
+    z "А че уже пара началась?"
+    s_s "Ты даун она уже 5 минут как идет бегом!"
+    z "Ладно иду уже"
     jump NA_PARE_PORKHA
 
 label NA_PARE_PORKHA:
     scene PARA_L
-    "От лица Стаса"
+    show BLACK_SCREEN
+    with dissolve
+    "В это время в 1-384..."
+    hide BLACK_SCREEN
     show VPORKSHEYAN
     with dissolve
     play sound "sounds/DELTA_SHTRIX.mp3"
@@ -276,14 +304,14 @@ label NA_PARE_PORKHA:
     p "Иначе следующего раза не будет"
     "Слава Богу я не опоздал..."
     p "Так продолжаем..."
-    p "Теория вероятностей — это наука, которая изучает мир случайностей и пытается их предсказать. "
+    "..."
     "..."
     "..."
     "~ Не я не могу уже...скууука ~"
     menu:
         "Что делать?"
         "Уснуть":
-            "Чтобы продемонстрировать вам..."
+            p "Чтобы продемонстрировать вам..."
             $ uspevaemost -= 1
             show BLACK_SCREEN 
             with dissolve
@@ -295,12 +323,12 @@ label NA_PARE_PORKHA:
             hide BLACK_SCREEN
             show PARA_L
             with dissolve
-            s "Ой бля че все что-ли?"
-            s "Так нужно бы 'своих' для начала найти. Познакомиться хоть"
+            s "Ой что уже все что-ли?"
+            s "Так нужно бы \"своих\" для начала найти. Познакомиться хоть"
             stop bgs fadeout(1.0)
         "Внимательно слушать":
             $ uspevaemost += 1
-            p "Теория вероятностей — это наука, которая изучает мир случайностей и пытается их предсказать. "
+            p "Теория вероятностей — это наука, которая изучает мир случайностей и пытается их предсказать. Здесь встречаются такие понятия, как «события» и «вероятности», у которых, в свою очередь, есть свои свойства и операции — о них мы поговорим чуть позже."
             p "Здесь встречаются такие понятия, как «события» и «вероятности», у которых, в свою очередь, есть свои свойства и операции — о них мы поговорим чуть позже."
             p "Проще всего продемонстрировать, как работает теория вероятностей, на примере подбрасывания монетки."
             p "В этом случае у нас есть два варианта:"
@@ -330,26 +358,24 @@ label POSLE_PARI_PORKHA:
     menu:
         "Что делать?"
         "Подойти к ним":
-            g "Бля ебать пара душная."
+            g "Капец пара душная"
             z "Согласен лучше бы дома поспал"
             b "Аче я в ДГТУ в куртке ?"
-            "Я не нашел другого спрайта..."
+            "Я не нашел другого спрайта...сорян..."
             z "У нас 10 минут еще есть"
             hide GOGA_OUTSIDE
             with dissolve
             show DIVAN_SMILE at center
             with dissolve
-            d "А ахуенно Женя го курить"
-            show ZHENYA_OUTSIDE at right 
-            with dissolve
-            z "Ебать погнали!"
+            d "О! Получается мы с Женей идем курить?!"
+            z "Погнали!"
             hide ZHENYA_OUTSIDE 
             with dissolve
             hide DIVAN_SMILE
             with dissolve
             "Женя с Ваней ушли на апель"
             show GOGA_OUTSIDE with dissolve
-            g "Пойдемте иначе опоздаем"
+            g "Идем, иначе опоздаем"
             s "Эй, ребят вы ВПР24?"
             g "Да, а что ты хотел?"
             s "О значит мне по адресу, меня зовут Станислав, можно просто - Стас"
@@ -357,8 +383,11 @@ label POSLE_PARI_PORKHA:
             g "Меня если что Гоша зовут"
             g "Это Борис"
             b "Дарова я да"
-            g "А это...бля они же на апель съебались"
-            g "У бля нам в 8 корпус ебашить пойдемте быстрее иначе опоздаем"
+            g "А это Ва..."
+            g "О..."
+            g "Они уже свалили"
+            g "..."
+            g "Ууу нам в 8 корпус... Идем скорее, иначе опоздаем"
             stop music fadeout(2.0)
             jump WITH_PAZANI
         "Лучше пройду мимо":
@@ -376,6 +405,7 @@ label ODIN:
     show BORYA_OUTSIDE at left2
     with dissolve
     "~ Хм, у этих ребят видимо, пара здесь же, может стоило подойти к ним? ~"
+    "..."
     "~ Только их вроде было четверо ... ~"
     "..."
     "~ В любом случае времени на это уже нет ~"
@@ -384,11 +414,19 @@ label ODIN:
     return
 
 label WITH_PAZANI:
-    scene
+    scene PARA_KOMP
     play music "sounds/Universitet.mp3"
-    # идет в аудиторию с пацанами
-    return
+    show GOGA_OUTSIDE at left2
+    show BORYA_OUTSIDE at right2
+    with dissolve
+    g "Ну вроде успели"
+    s "А что у нас сейчас?"
+    ""
+    ""
+    ""
+    ""
 
+    return
 
 label DEATH_BAD:
     scene HELL
