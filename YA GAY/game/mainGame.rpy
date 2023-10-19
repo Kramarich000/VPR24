@@ -38,6 +38,9 @@ init:
     image KABINET_DEKANA = "bg/KABINET_DEKANA.jpg"
     image 1_319 = "bg/1_319.jpg"
     image ODINOCHKA = "bg/ODINOCHKA.jpg"
+    image PARA_2 = "bg/PARA_2.jpg"
+    image PARA_2 = "bg/PARA_2.jpg"
+    image PARA_KOMP = "bg/PARA_KOMP.jpg"
 
     # Спрайты боряна:
     image BORYA_OUTSIDE = "sprites/BORYA/BORYA_OUTSIDE.png"
@@ -187,7 +190,7 @@ label start:
     stop bgs
     play sound "sounds/dgtu_zvon.mp3"
     s "Твою мать быстрее на 1 же пару опаздывать..."
-    show 1_319
+    show PARA_L
     s "Так это вроде тут"
     s "Заходим"
     jump DGTU_OUTSIDE
@@ -286,7 +289,7 @@ label NA_PARE_PORKHA:
     scene PARA_L
     show BLACK_SCREEN
     with dissolve
-    "В это время в 1-319..."
+    "В это время в 1-384..."
     hide BLACK_SCREEN
     show VPORKSHEYAN
     with dissolve
@@ -411,11 +414,19 @@ label ODIN:
     return
 
 label WITH_PAZANI:
-    scene
+    scene PARA_KOMP
     play music "sounds/Universitet.mp3"
-    # идет в аудиторию с пацанами
-    return
+    show GOGA_OUTSIDE at left2
+    show BORYA_OUTSIDE at right2
+    with dissolve
+    g "Ну вроде успели"
+    s "А что у нас сейчас?"
+    ""
+    ""
+    ""
+    ""
 
+    return
 
 label DEATH_BAD:
     scene HELL
