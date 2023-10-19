@@ -409,7 +409,8 @@ label ODIN:
     "~ Только их вроде было четверо ... ~"
     "..."
     "~ В любом случае времени на это уже нет ~"
-    ""
+    "~ Пора в аудиторию ~"
+    jump ODIN_NA_PARU
 
     return
 
@@ -421,8 +422,32 @@ label WITH_PAZANI:
     with dissolve
     g "Ну вроде успели"
     s "А что у нас сейчас?"
-    ""
-    ""
+    g "Какая-то херня. Карен потом придумает"
+    b "Кайф"
+    jump SECOND_PARA
+
+label ODIN_NA_PARU:
+    scene PARA_KOMP
+    play music "sounds/Universitet.mp3"
+    "Стас вошел в аудиторию"
+    "В ней он снова увидел этих ребят"
+    show GOGA_OUTSIDE at left2
+    show BORYA_OUTSIDE at right2
+    with dissolve
+    g "О привет ты новенький"
+    s "да"
+    b "Нам Серега говорил что у нас опять новенький"
+    #крч тут развить максимально стеснительный диалог
+    jump SECOND_PARA
+
+label SECOND_PARA:
+    scene PARA_KOMP
+    play music "sounds/Universitet.mp3"
+    show GOGA_OUTSIDE at left
+    show BORYA_OUTSIDE at left2
+    show Какой-то_Препод at right
+    with dissolve
+    "Какой-то Препод" "Так, ребята. Все на места. Пара началась"
     ""
     ""
 
