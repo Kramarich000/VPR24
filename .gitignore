@@ -1323,3 +1323,9 @@ YA GAY/errors.txt
 YA GAY/log.txt
 YA GAY/traceback.txt
 YA GAY/game/saves/
+YA GAY/game/cache/
+YA GAY/game/root/DIVAN/DivanRoot.rpy
+YA GAY/game/root/DIVAN/DivanRoot.rpyc
+YA GAY/game/screens.rpyc
+YA GAY/game/mainGame.rpyc
+YA GAY/game/gui.rpyc

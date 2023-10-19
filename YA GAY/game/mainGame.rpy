@@ -217,7 +217,7 @@ label DGTU_OUTSIDE:
     menu:
         d "...Женя, погнали на апель покурим"
         "Погнали":
-            jump apelsin
+            jump DIVAN_ROOT_START
         "Нет, пара скоро":
             pass
     hide DIVAN_SMILE
