@@ -15,7 +15,9 @@ init:
     define v = Character('Все', color="#ffffff")
     define author = Character('Автор', color="#FFFFFF")
     define stud = Character('Студенты', сolor="#00eaff")
+    # Для NVL:
     define nvle = Character("Карен", color="#c8ffc8", kind=nvl)
+
 
     # Курсор
     define config.mouse = {"default" : [("gui/cursor.png", 0, 0)]}
@@ -121,7 +123,7 @@ label start:
     s "Быстрей быстрей идем на взлет!"
     s "Так 1 корпус..."
     s "..."
-    s "Ага! Аудитория 319"
+    s "Ага! Аудитория 384"
     s "Ну с Богом"
     stop bgs
     hide NA_ULIZE
