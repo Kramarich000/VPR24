@@ -15,6 +15,7 @@ init:
     define v = Character('Все', color="#ffffff")
     define author = Character('Автор', color="#FFFFFF")
     define stud = Character('Студенты', сolor="#00eaff")
+
     # Для NVL:
     define nvle = Character("Карен", color="#c8ffc8", kind=nvl)
 
@@ -303,7 +304,7 @@ label NA_PARE_PORKHA:
     hide BLACK_SCREEN
     show VPORKSHEYAN
     with dissolve
-    play sound "sounds/DELTA_SHTRIX.mp3"
+    play music "sounds/DELTA_SHTRIX.mp3"
     "~ Блин как скучно... ~"
     "~ Как они его лекции слушают только? ~"
     "..."
