@@ -15,6 +15,7 @@ init:
     define v = Character('Все', color="#ffffff")
     define author = Character('Автор', color="#FFFFFF")
     define stud = Character('Студенты', сolor="#00eaff")
+    define nvle = Character("Карен", color="#c8ffc8", kind=nvl)
 
     # Курсор
     define config.mouse = {"default" : [("gui/cursor.png", 0, 0)]}
@@ -75,6 +76,9 @@ init:
 # Игра начинается здесь(пролог):
 label start:
     scene PROLOG_OCEAN
+    nvle "Так это тест nvla"
+    nvle "блаблабла"
+    p "Привет я поркш ебать"
     play music "music/neheart_-_snowfall_75941790.mp3"
     author "Что есть жизнь?"
     author "Жизнь - это дар, что бы познавать себя и знать, как сотворить прекрасное для своей души, которая способна жить, перемещаясь в любые измерения, где есть жизнь."
