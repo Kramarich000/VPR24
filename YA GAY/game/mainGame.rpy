@@ -1,20 +1,19 @@
 init:
     # Определение персонажей игры.
-    define b = Character('Борис', color="#3c00ff")
-    define g = Character('Гоша', color="#ccff00e0")
-    define p = Character('Поркшеян', color="#ff0000")
-    define n = Character('Никита', color="#eeff00")
-    define z = Character('Женя', color="#FFFF00")
-    define a = Character('Арина', color="#ff008c")
-    define a_s = Character('?Арина?', color="#FF0000")
-    define r = Character('Рома', color="#ffffff")
-    define s_s = Character('Серега', color="#26ff00")
-    define d = Character('Ваня', color="#8000ff")
-    define s = Character('Стас', color="#F4A460")
-    define i = Character('Иван Васильевич', сolor="#1b2780")
-    define v = Character('Все', color="#ffffff")
-    define author = Character('Автор', color="#FFFFFF")
-    define stud = Character('Студенты', сolor="#00eaff")
+    define b = Character('Борис', color="#3c00ff", callback=name_callback, cb_name="b")
+    define g = Character('Гоша', color="#ccff00e0", callback=name_callback, cb_name="g")
+    define p = Character('Поркшеян', color="#ff0000", callback=name_callback, cb_name="p")
+    define n = Character('Никита', color="#eeff00", callback=name_callback, cb_name="n")
+    define z = Character('Женя', color="#FFFF00", callback=name_callback, cb_name="z")
+    define a = Character('Арина', color="#ff008c", callback=name_callback, cb_name="a")
+    define a_s = Character('?Арина?', color="#FF0000", callback=name_callback, cb_name="a_a")
+    define s_s = Character('Серега', color="#26ff00", callback=name_callback, cb_name="s_s")
+    define d = Character('Ваня', color="#8000ff", callback=name_callback, cb_name="d")
+    define s = Character('Стас', color="#F4A460", callback=name_callback, cb_name=None)
+    define i = Character('Иван Васильевич', сolor="#1b2780", callback=name_callback, cb_name="i")
+    define v = Character('Все', color="#ffffff", callback=name_callback, cb_name=None)
+    define author = Character('Автор', color="#FFFFFF", callback=name_callback, cb_name=None)
+    define stud = Character('Студенты', сolor="#00eaff", callback=name_callback, cb_name=None)
     # Для NVL:
     define nvle = Character("Карен", color="#c8ffc8", kind=nvl)
 
@@ -47,27 +46,27 @@ init:
     image PARA_KOMP = "bg/PARA_KOMP.jpg"
 
     # Спрайты боряна:
-    image BORYA_OUTSIDE = "sprites/BORYA/BORYA_OUTSIDE.png"
+    image BORYA_OUTSIDE = At("sprites/BORYA/BORYA_OUTSIDE.png", sprite_highlight("b"))
     # Спрайты Гоги:
-    image GOGA_OUTSIDE = "sprites/GOGA/GOGA_OUTSIDE.png"
+    image GOGA_OUTSIDE = At("sprites/GOGA/GOGA_OUTSIDE.png", sprite_highlight("g"))
     # Спрайты Поркша:
-    image VPORKSHEYAN = "sprites/PORKSH/VPORKSHEYAN.png"
+    image VPORKSHEYAN = At("sprites/PORKSH/VPORKSHEYAN.png", sprite_highlight("p"))
     # Спрайты Никиты:
-    image NIKITA_OUTSIDE = "sprites/NEKIT/NIKITA_OUTSIDE.png"
+    image NIKITA_OUTSIDE = At("sprites/NEKIT/NIKITA_OUTSIDE.png", sprite_highlight("n"))
     # Спрайты Арины:
-    image ARINA_OUTSIDE = "sprites/ARINA/ARINA_OUTSIDE.png"
-    image ARINA_SUCCUB = "sprites/ARINA/ARINA_SUCCUB.png"
+    image ARINA_OUTSIDE = At("sprites/ARINA/ARINA_OUTSIDE.png", sprite_highlight("a"))
+    image ARINA_SUCCUB = At("sprites/ARINA/ARINA_SUCCUB.png", sprite_highlight("a_a"))
     # Спрайты Жени:
-    image ZHENYA_OUTSIDE = "sprites/ZHENYA/ZHENYA_OUTSIDE.png"
+    image ZHENYA_OUTSIDE = At("sprites/ZHENYA/ZHENYA_OUTSIDE.png", sprite_highlight("z"))
     # Спрайты Сереги:
-    image SEREGA = "sprites/SEREGA/SEREGA.png"
+    image SEREGA = At("sprites/SEREGA/SEREGA.png", sprite_highlight("s_s"))
     # Спрайты Вани:
-    image DIVAN_SERIOUS = "sprites/DIVAN/DIVAN_SERIOUS.png"
-    image DIVAN_CRY = "sprites/DIVAN/DIVAN_CRY.png"
-    image DIVAN_SMILE = "sprites/DIVAN/DIVAN_SMILE.png"
+    image DIVAN_SERIOUS = At("sprites/DIVAN/DIVAN_SERIOUS.png", sprite_highlight("d"))
+    image DIVAN_CRY = At("sprites/DIVAN/DIVAN_CRY.png", sprite_highlight("d"))
+    image DIVAN_SMILE = At("sprites/DIVAN/DIVAN_SMILE.png", sprite_highlight("d"))
 
     # Спрайты Ивана Васильевича:
-    image IVAN_VASILIICH = "sprites/IVAN_VASILIICH/IVAN_VASILIICH.png"
+    image IVAN_VASILIICH = At("sprites/IVAN_VASILIICH/IVAN_VASILIICH.png", sprite_highlight("i"))
 
     default HP = 5
     default uspevaemost = 0
