@@ -90,6 +90,8 @@ define config.after_load_transition = None
 ## Используется при входе в главное меню после того, как игра закончится.
 
 define config.end_game_transition = None
+## Плавное появление главного меню
+define config.end_splash_transition = Dissolve(2.0)
 
 
 ## Переменная, устанавливающая переход, когда старт игры не существует. Вместо
