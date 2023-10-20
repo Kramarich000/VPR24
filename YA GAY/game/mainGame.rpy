@@ -35,7 +35,6 @@ init:
     image KORIDOR = "bg/KORIDOR.jpg"
     image HELL = "bg/HELL.jpg"
     image PROLOG_OCEAN = "bg/PROLOG_OCEAN.jpg"
-    image WAKE_UP = "bg/WAKE_UP.jpg"
     image NA_ULIZE = "bg/NA_ULIZE.jpg"
     image BLACK_SCREEN = "bg/BLACK_SCREEN.jpg"
     image KABINET_DEKANA = "bg/KABINET_DEKANA.jpg"
@@ -44,6 +43,9 @@ init:
     image PARA_2 = "bg/PARA_2.jpg"
     image PARA_2 = "bg/PARA_2.jpg"
     image PARA_KOMP = "bg/PARA_KOMP.jpg"
+    image OBSHAGA = "bg/OBSHAGA.jpg"
+    image OBSHAGA_KUHNYA = "bg/OBSHAGA_KUHNYA.jpg"
+    image OBSHAGA_VHOD = "bg/OBSHAGA_VHOD.jpg"
 
     # Спрайты боряна:
     image BORYA_OUTSIDE = At("sprites/BORYA/BORYA_OUTSIDE.png", sprite_highlight("b"))
@@ -101,7 +103,7 @@ label start:
     author "..."
     author "..."
     author "...Что?"
-    show WAKE_UP
+    show OBSHAGA
     with dissolve
     stop bgs
     play music "music/Мышь - Жвачка.mp3" fadein(2.0)
@@ -114,7 +116,7 @@ label start:
     "ТВОЮ МАТЬ! У меня же сегодня учеба!"
     "Щас еще опоздаю и буду отчислен еще даже не придя ни на одну пару...бегом!"
     "Стас взял пропуск и вышел из общаги"
-    hide WAKE_UP
+    hide OBSHAGA
     show NA_ULIZE
     with dissolve
     stop music
@@ -216,9 +218,10 @@ label DGTU_OUTSIDE:
     with dissolve
     b "Да иду я уже"
     g "О Ванек дарова"
-    show DIVAN_SMILE at center
     show GOGA_OUTSIDE at left
     show BORYA_OUTSIDE at right
+    with move
+    show DIVAN_SMILE at center
     with dissolve
     d "Дарова че вы тут стоите?"
     g "Как-никак тебя ждем"
