@@ -328,6 +328,7 @@ label NA_PARE_PORKHA:
     menu:
         "Уснуть":
             p "Чтобы продемонстрировать вам..."
+            stop music fadeout(2.0)
             $ uspevaemost -= 1
             show BLACK_SCREEN 
             with dissolve
@@ -373,8 +374,7 @@ label NA_PARE_PORKHA:
             play sound "sounds/dgtu_zvon.mp3"
             hide VPORKSHEYAN
             with dissolve
-            s "Неужели{w}, я думал усну епт"
-            
+            s "Неужели{w}, я думал усну епта"
     s "Так нужно бы \"своих\" для начала найти. Познакомиться хоть"
     stop bgs fadeout(1.0)
     jump POSLE_PARI_PORKHA
