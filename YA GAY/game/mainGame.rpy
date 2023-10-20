@@ -85,7 +85,7 @@ init:
     default HP = 5
     default uspevaemost = 0
     default karma = 10
-    default soqiofob = 0
+    default sociofob = 0
     
     python:
 
@@ -329,8 +329,8 @@ label NA_PARE_PORKHA:
     "..."
     "..."
     "~ Не я не могу уже...скууука ~"
+    window hide
     menu:
-        "Что делать?"
         "Уснуть":
             p "Чтобы продемонстрировать вам..."
             $ uspevaemost -= 1
@@ -374,11 +374,13 @@ label NA_PARE_PORKHA:
             nvl_p "Ещё вероятность может быть условной — или зависеть от другого события. Например, если мы хотим вытащить любой туз из колоды карт, шанс равен 4/36."
             nvl_p "Но если до этого кто-то уже вытащил одного туза, то вероятность будет равна 3/35. Это потому, что в колоде стало на одну карту меньше и количество благоприятных событий тоже уменьшилось."
             nvl_p "С определениями закончили — теперь давайте узнаем, как событиями можно управлять..."
+            ""
+            window hide
+            pause            
+            play sound "sounds/dgtu_zvon.mp3"
             hide VPORKSHEYAN
             with dissolve
-            "бла бла бла"
-            "..."
-            play sound "sounds/dgtu_zvon.mp3"
+            window show
             s "Неужели, я думал усну епт"
             s "Так нужно бы 'своих' для начала найти. Познакомиться хоть"
             stop sound fadeout(2.0)
@@ -393,9 +395,10 @@ label POSLE_PARI_PORKHA:
     show ZHENYA_OUTSIDE at right
     show BORYA_OUTSIDE at left
     with dissolve
+    window hide
     menu:
-        "Что делать?"
         "Подойти к ним":
+            $ sociofob -= 1
             g "Капец пара душная"
             z "Согласен лучше бы дома поспал"
             b "Аче я в ДГТУ в куртке ?"
@@ -426,63 +429,66 @@ label POSLE_PARI_PORKHA:
             g "Они уже свалили"
             g "..."
             g "Ууу нам в 8 корпус... Идем скорее, иначе опоздаем"
-            stop music fadeout(2.0)
-            jump WITH_PAZANI
+
         "Лучше пройду мимо":
             "~ Думаю что не стоит подходить, а то обознаюсь еще ~"
-            $ soqiofob += 1
-            stop music fadeout(2.0)
-            jump ODIN
+            $ sociofob += 1
 
-label ODIN:
-    scene ODINOCHKA
-    play music "sounds/Universitet.mp3"
-    "~ Так-с аудитория 8- ~"
-    "~ Ага, нашел! Вроде не опоздал ~"
-    show GOGA_OUTSIDE at right2
-    show BORYA_OUTSIDE at left2
-    with dissolve
-    "~ Хм, у этих ребят видимо, пара здесь же, может стоило подойти к ним? ~"
-    "..."
-    "~ Только их вроде было четверо ... ~"
-    "..."
-    "~ В любом случае времени на это уже нет ~"
-    "~ Пора в аудиторию ~"
-    jump ODIN_NA_PARU
-
-    return
-
-label WITH_PAZANI:
-    scene PARA_KOMP
-    play music "sounds/Universitet.mp3"
-    show GOGA_OUTSIDE at left2
-    show BORYA_OUTSIDE at right2
-    with dissolve
-    g "Ну вроде успели"
-    s "А что у нас сейчас?"
-    g "Какая-то херня. Карен потом придумает"
-    b "Кайф"
-    jump SECOND_PARA
-
-label ODIN_NA_PARU:
-    scene PARA_KOMP
-    play music "sounds/Universitet.mp3"
-    "Стас вошел в аудиторию"
-    "В ней он снова увидел этих ребят"
-    show GOGA_OUTSIDE at left2
-    show BORYA_OUTSIDE at right2
-    with dissolve
-    g "О привет ты новенький"
-    s "да"
-    b "Нам Серега говорил что у нас опять новенький"
-    #крч тут развить максимально стеснительный диалог
+    stop music fadeout(2.0)
     jump SECOND_PARA
 
 label SECOND_PARA:
-    scene PARA_KOMP
-    play music "sounds/Universitet.mp3"
+    if (sociofob > 0): 
+        scene ODINOCHKA
+        play music "sounds/Universitet.mp3"
+        "~ Так-с аудитория 8- ~"
+        "~ Ага, нашел! Вроде не опоздал ~"
+        show GOGA_OUTSIDE at right2
+        show BORYA_OUTSIDE at left2
+        with dissolve
+        "~ Хм, у этих ребят видимо, пара здесь же, может стоило подойти к ним? ~"
+        "..."
+        "~ Только их вроде было четверо ... ~"
+        hide GOGA_OUTSIDE
+        hide BORYA_OUTSIDE
+        with dissolve
+        pause
+        "~ В любом случае времени на это уже нет ~"
+        "~ Пора в аудиторию ~"
+        hide ODINOCHKA
+        scene PARA_KOMP
+        with fade
+        "Стас вошел в аудиторию"
+        "В ней он снова увидел этих ребят"
+        show GOGA_OUTSIDE at left2
+        show BORYA_OUTSIDE at right2
+        with dissolve
+        g "О привет ты новенький?"
+        "Стас неохотно подходит к ребятам"
+        s "Да"
+        b "Нам Серый говорил что к нам человечек со Школы Х переводится"
+        g "Угу. {w}Как тебя зовут?"
+        s "Станислав. Для друзей просто Стас"
+        b "Ну тогда будем считать что мы уже дружим"
+        b "Я Боря. А это Гоша"
+        g "Дарова"
+        "Пожимают руки"
+        "~ А они вроде дружелюбные ~"
+        "~ Думаю мы подружимся ~"
+    else:
+        scene PARA_KOMP
+        play music "sounds/Universitet.mp3"
+        show GOGA_OUTSIDE at left2
+        show BORYA_OUTSIDE at right2
+        with dissolve
+        g "Ну вроде успели"
+        s "А что у нас сейчас?"
+        g "Какая-то херня. Карен потом придумает"
+        b "Кайф"
+        
     show GOGA_OUTSIDE at left
     show BORYA_OUTSIDE at left2
+    with move
     show Какой-то_Препод at right
     with dissolve
     "Какой-то Препод" "Так, ребята. Все на места. Пара началась"
