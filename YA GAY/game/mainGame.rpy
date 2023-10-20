@@ -14,10 +14,9 @@ init:
     define v = Character('Все', color="#ffffff", callback=name_callback, cb_name=None)
     define author = Character('Автор', color="#FFFFFF", callback=name_callback, cb_name=None)
     define stud = Character('Студенты', сolor="#00eaff", callback=name_callback, cb_name=None)
-    # Для NVL:
-    define nvle = Character("Карен", color="#c8ffc8", kind=nvl)
 
     # Для NVL:
+    define nvle = Character("...", color="#c8ffc8", kind=nvl)
     define nvl_p = Character("Поркшеян", color="#ff0000", kind=nvl)
 
     # Теги для анимированного текста
@@ -370,7 +369,8 @@ label NA_PARE_PORKHA:
             nvl_p "Но если до этого кто-то уже вытащил одного туза, то вероятность будет равна 3/35. Это потому, что в колоде стало на одну карту меньше и количество благоприятных событий тоже уменьшилось."
             nvl_p "С определениями закончили — теперь давайте узнаем, как событиями можно управлять..."
             window hide
-            pause           
+            pause   
+            stop music fadeout(2.0)        
             play sound "sounds/dgtu_zvon.mp3"
             hide VPORKSHEYAN
             with dissolve
