@@ -333,6 +333,7 @@ label NA_PARE_PORKHA:
         "Что делать?"
         "Уснуть":
             p "Чтобы продемонстрировать вам..."
+            stop music fadeout(2.0)
             $ uspevaemost -= 1
             show BLACK_SCREEN 
             with dissolve
@@ -378,6 +379,7 @@ label NA_PARE_PORKHA:
             with dissolve
             "бла бла бла"
             "..."
+            stop music fadeout(2.0)
             play sound "sounds/dgtu_zvon.mp3"
             s "Неужели, я думал усну епт"
             s "Так нужно бы 'своих' для начала найти. Познакомиться хоть"
