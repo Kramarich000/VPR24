@@ -1,7 +1,4 @@
 init:
-    # Положение окна NVL'a
-    style nvl_window.background = "gui/nvl.png"
-    style nvl_window.xpadding = 50
     # Определение персонажей игры.
     define b = Character('Борис', color="#3c00ff", callback=name_callback, cb_name="b")
     define g = Character('Гоша', color="#ccff00e0", callback=name_callback, cb_name="g")
@@ -18,7 +15,7 @@ init:
     define author = Character('Автор', color="#FFFFFF", callback=name_callback, cb_name=None)
     define stud = Character('Студенты', сolor="#00eaff", callback=name_callback, cb_name=None)
 
-    # Для :
+    # Для NVl'a:
     define nvl_1 = Character(None, kind=nvl)
 
     # Теги для анимированного текста
@@ -189,6 +186,7 @@ label start:
     hide KABINET_DEKANA
     show PROLOG_OCEAN
     with dissolve
+    # with Pixellate(1, 3) - потестил вроде неплохой такой переход пиксельный (1 число это время а 2 число это шаг)
     play music "music/neheart_Reidenshi_-_distorted_memories_75718831.mp3"
     s "Итак, я оказался в группе ВПР24..."
     s "Не знаю верный ли был это выбор, но..."
