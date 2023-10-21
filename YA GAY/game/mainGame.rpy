@@ -385,7 +385,7 @@ label NA_PARE_PORKHA:
             with dissolve
             s "Неужели{w}, я думал усну епта"
     s "Так нужно бы \"своих\" для начала найти. Познакомиться хоть" # альтернатива: s 'Так нужно бы "своих" для начала найти. Познакомиться хоть'
-    stop bgs fadeout(1.0)
+    stop sound fadeout(5.0)
     jump POSLE_PARI_PORKHA
 
 label POSLE_PARI_PORKHA:
