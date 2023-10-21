@@ -98,7 +98,7 @@ init:
     
 # Игра начинается здесь(пролог):
 label start:
-    scene PROLOG_OCEAN
+    scene PROLOG_OCEAN 
     play music "music/neheart_-_snowfall_75941790.mp3"
     author "{glitch}{sc}Что есть жизнь?{/sc}{/glitch}"
     author "Жизнь - это дар, что бы познавать себя и знать, как сотворить прекрасное для своей души, которая способна жить, перемещаясь в любые измерения..."
@@ -112,7 +112,7 @@ label start:
     author "Ведь если бы это было так, то по факту мы с вами становимся марионетками в чей-то большой игре под названием судьба."
     author "Это как определенный сценарий, в котором нам как читателям все известно."
     author "Но..."
-    stop music fadeout (2.0)
+    stop music 
     play bgs "sounds/alarm-clock-beep-1_zjgin-vd.mp3"
     show BLACK_SCREEN 
     author "..."
