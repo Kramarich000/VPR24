@@ -390,8 +390,8 @@ define gui.nvl_name_xalign = 1.0
 
 ## Местоположение, ширина и выравнивание диалогового текста.
 define gui.nvl_text_xpos = 200
-define gui.nvl_text_ypos = 12
-define gui.nvl_text_width = 1500
+define gui.nvl_text_ypos = 25
+define gui.nvl_text_width = 1520
 define gui.nvl_text_xalign = 0.0
 
 ## Местоположение, ширина и выравнивание текста nvl_thought (текст от лица
