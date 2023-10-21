@@ -444,6 +444,7 @@ label POSLE_PARI_PORKHA:
 label SECOND_PARA:
     if (sociofob > 0): 
         scene ODINOCHKA
+        with dissolve
         play music "sounds/Universitet.mp3"
         "~ Так-с аудитория 1-3ХХ ~"
         "~ Ага, нашел! Вроде не опоздал ~"
