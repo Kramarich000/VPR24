@@ -86,9 +86,11 @@ init:
     default sociofob = 0
     
     python:
-        # Открывание/закрывание глаз:
-        # onn = imageDissolve("gui/eye.png", 2.0) 
+        # Звуковой канал:
         renpy.music.register_channel("bgs", "sfx", loop = True)
+        # Открывание/закрывание глаз:
+        opened = ImageDissolve("gui/eye.png", 2.0, 20, reverse=False) 
+        closed = ImageDissolve("gui/eye.png", 2.0, 20, reverse=True)
         # Положение окна NVL'a
         style.nvl_window.background = "gui/nvl.png"
         style.nvl_window.xpadding = 55
@@ -112,11 +114,13 @@ label start:
     author "Но..."
     stop music fadeout (2.0)
     play bgs "sounds/alarm-clock-beep-1_zjgin-vd.mp3"
+    show BLACK_SCREEN 
     author "..."
     author "..."
     author "..."
     author "...Что?"
-    show OBSHAGA
+    window hide
+    show OBSHAGA with opened
     with dissolve
     stop bgs
     play music "music/Мышь - Жвачка.mp3" fadein(2.0)
