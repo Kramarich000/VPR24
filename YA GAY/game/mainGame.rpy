@@ -1,4 +1,7 @@
 init:
+    # Положение окна NVL'a
+    style nvl_window.background = "gui/nvl.png"
+    style nvl_window.xpadding = 50
     # Определение персонажей игры.
     define b = Character('Борис', color="#3c00ff", callback=name_callback, cb_name="b")
     define g = Character('Гоша', color="#ccff00e0", callback=name_callback, cb_name="g")
@@ -367,6 +370,7 @@ label NA_PARE_PORKHA:
             nvl_1 "Ещё вероятность может быть условной — или зависеть от другого события. Например, если мы хотим вытащить любой туз из колоды карт, шанс равен 4/36."
             nvl_1 "Но если до этого кто-то уже вытащил одного туза, то вероятность будет равна 3/35. Это потому, что в колоде стало на одну карту меньше и количество благоприятных событий тоже уменьшилось."
             nvl_1 "С определениями закончили — теперь давайте узнаем, как событиями можно управлять..."
+            window hide
             pause   
             stop music fadeout(2.0)        
             play sound "sounds/dgtu_zvon.mp3"
