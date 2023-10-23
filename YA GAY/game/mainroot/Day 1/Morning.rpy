@@ -145,6 +145,7 @@ label D1M_PROLOG:
     s "Так! Это вроде тут..."
     s "Заходим"
     stop sound
+    jump D1M_DGTU_OUTSIDE
     jump DGTU_OUTSIDE
 
 label D1M_DGTU_OUTSIDE:

@@ -57,4 +57,4 @@ label D1T1:
             $ sociofob += 1
 
     stop music fadeout(2.0)
-    jump D1P2
+    jump D1P2_PERED_PAROY
