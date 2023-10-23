@@ -145,7 +145,7 @@ label D1M_PROLOG:
     s "Так! Это вроде тут..."
     s "Заходим"
     stop sound
-    jump DGTU_OUTSIDE
+    jump D1M_DGTU_OUTSIDE
 
 label D1M_DGTU_OUTSIDE:
     play bgs "sounds/zvuki-na-ulice-goroda.mp3"
