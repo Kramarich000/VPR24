@@ -146,6 +146,7 @@ label D1M_PROLOG:
     s "Заходим"
     stop sound
     jump D1M_DGTU_OUTSIDE
+    jump DGTU_OUTSIDE
 
 label D1M_DGTU_OUTSIDE:
     play bgs "sounds/zvuki-na-ulice-goroda.mp3"
