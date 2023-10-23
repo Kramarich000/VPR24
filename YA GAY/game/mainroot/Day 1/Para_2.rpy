@@ -2,7 +2,7 @@ label D1P2_PERED_PAROY:
     if (sociofob > 0): 
         scene ODINOCHKA
         with dissolve
-        play music "sounds/Universitet.mp3"
+        play music "sounds/rinlab.ru-sound_07243.mp3"
         "~ Так-с аудитория 1-3ХХ ~"
         "~ Ага, нашел! Вроде не опоздал ~"
         show GOGA_OUTSIDE at right2
@@ -80,4 +80,9 @@ label D1P2_PERED_PAROY:
     o_v "Так, ребята."
     o_v "Все на места."
     o_v "Пара началась"
-    return
+    jump D1P2
+
+
+
+label D1P2:
+    scene PARA_KOMP
