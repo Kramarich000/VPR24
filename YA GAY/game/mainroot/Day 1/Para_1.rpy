@@ -83,6 +83,7 @@ label D1P1:
             pause   
             stop music fadeout(2.0)        
             play sound "sounds/dgtu_zvon.mp3"
+            p "Так, старосты мне списки отсутствующих и все свободны"
             hide VPORKSHEYAN
             with dissolve
             s "Неужели{w}, я думал усну епта"
