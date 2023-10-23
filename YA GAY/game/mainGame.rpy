@@ -95,10 +95,6 @@ init:
         # Открывание/закрывание глаз:
         opened = ImageDissolve("gui/eye.png", 2.0, 20, reverse=False) 
         closed = ImageDissolve("gui/eye.png", 2.0, 20, reverse=True)
-        # Положение окна NVL'a
-        style.nvl_window.background = "gui/nvl.png"
-        style.nvl_window.xpadding = 55
-        style.nvl_window.ypadding = 55
     
 # Удобства ради теперь сцены будут наименоваться с использованием префиксов
 # Название сцены должно указываться в формате представленном ниже:
