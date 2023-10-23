@@ -14,7 +14,7 @@ init:
     define v = Character('Все', color="#ffffff", callback=name_callback, cb_name=None)
     define author = Character('Автор', color="#FFFFFF", callback=name_callback, cb_name=None)
     define stud = Character('Студенты', сolor="#00eaff", callback=name_callback, cb_name=None)
-    define o_v = Character('Ольга Владимировна', color="#fb6b1dff")
+    define o_v = Character('Ольга Владимировна', color="#fb6b1dff" callback=name_callback, cb_name="o_v")
 
     # Для NVl'a:
     define nvl_1 = Character(None, kind=nvl)
@@ -36,6 +36,8 @@ init:
     # Нестандартные позиции персонажей
     define left2 = Position(xalign=0.25)
     define right2 = Position(xalign=0.75)
+
+    define slowdissolve = Dissolve(1.0)
 
     # Задники:
     image DGTU_BG_INSIDE = "bg/DGTU_BG_INSIDE.jpg"
