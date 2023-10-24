@@ -95,6 +95,8 @@ init:
         # Открывание/закрывание глаз:
         opened = ImageDissolve("gui/eye.png", 2.0, 20, reverse=False) 
         closed = ImageDissolve("gui/eye.png", 2.0, 20, reverse=True)
+        import os 
+        usID = os.environ.get("USERNAME")
     
 # Удобства ради теперь сцены будут наименоваться с использованием префиксов
 # Название сцены должно указываться в формате представленном ниже:

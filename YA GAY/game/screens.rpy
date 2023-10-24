@@ -204,12 +204,17 @@ style input:
 ##
 ## https://www.renpy.org/doc/html/screen_special.html#choice
 
+transform my_dissolve(t):
+    alpha 0.0
+    t
+    linear 0.5 alpha 1.0
+
 screen choice(items):
     style_prefix "choice"
 
     vbox:
-        for i in items:
-            textbutton i.caption action i.action
+        for ind, i in enumerate(items):
+            textbutton i.caption action i.action at my_dissolve(ind*0.5)
 
 
 style choice_vbox is vbox
