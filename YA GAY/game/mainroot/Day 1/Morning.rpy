@@ -2,7 +2,6 @@ label D1M_PROLOG:
     scene PROLOG_OCEAN 
     play music "music/neheart_-_snowfall_75941790.mp3"
     author "{glitch}{sc}Что есть жизнь?{/sc}{/glitch}"
-    author "Не ответишь?{w} {sc}{color=#FF0000}[usID]{/sc}" 
     author "Жизнь - это дар чтобы познавать себя и знать, как сотворить прекрасное для своей души, которая способна жить, перемещаясь в любые измерения..."
     author "{glitch=5}{sc=5}...ГДЕ ЕСТЬ ЖИЗНЬ{/sc}{/glitch}"
     author "А душа - это что?"
