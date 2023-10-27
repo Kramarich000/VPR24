@@ -15,6 +15,7 @@ init:
     define author = Character('Автор', color="#FFFFFF", callback=name_callback, cb_name=None)
     define stud = Character('Студенты', сolor="#00eaff", callback=name_callback, cb_name=None)
     define o_v = Character('Ольга Владимировна', color="#fb6b1dff", callback=name_callback, cb_name="o_v")
+    define k_p = Character('Константин Алексеевич', color="#a6ff00")
 
     # Для NVl'a:
     define nvl_1 = Character(None, kind=nvl)
@@ -55,11 +56,12 @@ init:
     image 1_319 = "bg/1_319.jpg"
     image ODINOCHKA = "bg/ODINOCHKA.jpg"
     image PARA_2 = "bg/PARA_2.jpg"
-    image PARA_2 = "bg/PARA_2.jpg"
     image PARA_KOMP = "bg/PARA_KOMP.jpg"
     image OBSHAGA = "bg/OBSHAGA.jpg"
     image OBSHAGA_KUHNYA = "bg/OBSHAGA_KUHNYA.jpg"
     image OBSHAGA_VHOD = "bg/OBSHAGA_VHOD.jpg"
+    image PARA_INFA = "bg/PARA_INFA.jpg"
+    image CHILL = "bg/CHILL.jpg"
 
     # Спрайты боряна:
     image BORYA_OUTSIDE = At("sprites/BORYA/BORYA_OUTSIDE.png", sprite_highlight("b"))
@@ -81,9 +83,13 @@ init:
     image DIVAN_CRY = At("sprites/DIVAN/DIVAN_CRY.png", sprite_highlight("d"))
     image DIVAN_SMILE = At("sprites/DIVAN/DIVAN_SMILE.png", sprite_highlight("d"))
 
+    # Спрайты лысика:
+    ######################
+
     # Спрайты Ивана Васильевича:
     image IVAN_VASILIICH = At("sprites/IVAN_VASILIICH/IVAN_VASILIICH.png", sprite_highlight("i"))
 
+    # Статы:
     default HP = 5
     default uspevaemost = 0
     default karma = 10
