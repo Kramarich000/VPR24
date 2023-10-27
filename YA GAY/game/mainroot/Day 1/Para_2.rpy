@@ -247,6 +247,7 @@ label D1P2:
     play sound "sounds/dgtu_zvon.mp3"
     o_v "Так, на сегодня хватит, все свободны, домашнее задание я вам дала"
     stud "Спасибо! До свидания!"
+    stop sound fadeout(2.0)
     jump D1T2
 
 
