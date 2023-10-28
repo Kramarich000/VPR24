@@ -1,5 +1,5 @@
 label D1M_PROLOG:
-    scene PROLOG_OCEAN 
+    scene PROLOG_OCEAN
     play music "music/Fucking_Depression.mp3" fadein(3.0)
     author "{glitch}{sc}Что есть жизнь?{/sc}{/glitch}"
     author "Жизнь - это дар чтобы познавать себя и знать, как сотворить прекрасное для своей души, которая способна жить, перемещаясь в любые измерения..."
