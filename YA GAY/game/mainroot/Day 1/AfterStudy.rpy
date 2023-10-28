@@ -1,6 +1,7 @@
-label D1M_CHILL:
+label D1AS_CHILL:
     scene CHILL
     with fade
+    play music "music/Normal_Day.mp3"
     show GOGA_OUTSIDE at center
     show BORYA_OUTSIDE at right
     show DIVAN_SMILE at left
@@ -47,6 +48,41 @@ label D1M_CHILL:
     g "Все побежал я давайте"
     s "Пока Гоша"
     b "Давай топай уже"
+    hide GOGA_OUTSIDE
+    show BORYA_OUTSIDE at center
+    with move
+    b "Нам тоже пора. Нечего тут стоять"
+    b "Идем в общагу, или сначала к Ване и Жене на апельсин заскочим?"
+    menu:
+        "Пойти на апельсин":
+            $sociofob -= 1
+            s "Давай сначала на апельсин"
+            b "Окей. Погнали"
+            stop music fadeout(0.5)
+            jump D1AS_APELSIN
+
+        "Пойти сразу в общагу":
+            s "Слушай, давай лучше сразу в общагу. Что то я устал за сегодня..."
+            b "Окей. Погнали"
+            stop music fadeout(1.0)
+            jump D1AS_OBSHAGA
+    
+label D1AS_APELSIN:
+    scene APELSIN
+    with dissolve
+    play bgs "sounds/zvuki-na-ulice-goroda.mp3"
+    "Стас и Боря пришли на апельсин"
+    return
+
+label D1AS_OBSHAGA:
+    scene OBSHAGA_VHOD
+    show BORYA_OUTSIDE at center
+    with dissolve
+    play bgs "sounds/zvuki-na-ulice-goroda.mp3"
+    b "Так. Ну мы на месте."
+    b "Тут наши пути расходятся. {w}Я в пятерочку пойду"
+    s "Хорошо. Давай, пока"
+    hide BORYA_OUTSIDE with dissolve
+    "~ Хм... Славные все же парни {w}этот ВПР24 ~"
     return
     # Тут они потом короче пойдут в общагу и там попрощаются после чего Стас будет играть в игры на ноуте и вечером начнет думать о сегодняшнем дне и тут начнутся рефлексии
-

@@ -1,6 +1,5 @@
 label D1M_PROLOG:
     scene PROLOG_OCEAN 
-    # play music "music/neheart_-_snowfall_75941790.mp3"
     play music "music/Fucking_Depression.mp3" fadein(3.0)
     author "{glitch}{sc}Что есть жизнь?{/sc}{/glitch}"
     author "Жизнь - это дар чтобы познавать себя и знать, как сотворить прекрасное для своей души, которая способна жить, перемещаясь в любые измерения..."
@@ -44,16 +43,15 @@ label D1M_PROLOG:
     "...Понедельник..."
     "...Так..."
     with hpunch
-    "У меня же сегодня учеба!"
+    "{size=+10}{b}У меня же сегодня учеба!"
     "Сейчас еще опоздаю и буду отчислен, еще даже не придя ни на одну пару..."
-    "БЕГОМ"
+    "{size=+10}{b}БЕГОМ"
     "Стас взял пропуск и вышел из общаги"
     hide OBSHAGA
     show NA_ULIZE
     with dissolve
     stop music fadeout(2.0)
     play bgs "sounds/zvuki-na-ulice-goroda.mp3"
-    s "Быстрей, быстрей, идем на взлет!"
     s "Так, 1 корпус..."
     s "..."
     s "Ага! Аудитория 384"
@@ -62,7 +60,7 @@ label D1M_PROLOG:
     hide NA_ULIZE
     show BLACK_SCREEN
     with dissolve
-    s "Так-с...{w}Ну что же...{w}Хех"
+    s "Так-с... {w}Ну что же... {w}Хех"
     hide BLACK_SCREEN
     show PROLOG_OCEAN
     with dissolve
