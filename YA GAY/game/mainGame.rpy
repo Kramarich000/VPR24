@@ -1,27 +1,27 @@
 init:
-    # Определение персонажей игры.
-    define b = Character('Борис', color="#3c00ff", callback=name_callback, cb_name="b")
-    define g = Character('Гоша', color="#ccff00e0", callback=name_callback, cb_name="g")
-    define p = Character('Поркшеян', color="#ff0000", callback=name_callback, cb_name="p")
-    define n = Character('Никита', color="#eeff00", callback=name_callback, cb_name="n")
-    define z = Character('Женя', color="#FFFF00", callback=name_callback, cb_name="z")
-    define a = Character('Арина', color="#ff008c", callback=name_callback, cb_name="a")
-    define a_s = Character('?Арина?', color="#FF0000", callback=name_callback, cb_name="a_a")
-    define s_s = Character('Серега', color="#26ff00", callback=name_callback, cb_name="s_s")
-    define d = Character('Ваня', color="#8000ff", callback=name_callback, cb_name="d")
-    define s = Character('Стас', color="#F4A460", callback=name_callback, cb_name=None)
-    define i = Character('Иван Васильевич', сolor="#1b2780", callback=name_callback, cb_name="i")
-    define v = Character('Все', color="#ffffff", callback=name_callback, cb_name=None)
-    define author = Character('Автор', color="#FFFFFF", callback=name_callback, cb_name=None)
-    define stud = Character('Студенты', сolor="#00eaff", callback=name_callback, cb_name=None)
-    define o_v = Character('Ольга Владимировна', color="#fb6b1dff", callback=name_callback, cb_name="o_v")
+    # Определение персонажей игры)
+    define b = Character('Борис', color="#3c00ff")
+    define g = Character('Гоша', color="#ccff00e0")
+    define p = Character('Поркшеян', color="#ff0000")
+    define n = Character('Никита', color="#eeff00")
+    define z = Character('Женя', color="#FFFF00")
+    define a = Character('Арина', color="#ff008c")
+    define a_s = Character('?Арина?', color="#FF0000")
+    define s_s = Character('Серега', color="#26ff00")
+    define d = Character('Ваня', color="#8000ff")
+    define s = Character('Стас', color="#F4A460")
+    define i = Character('Иван Васильевич', сolor="#1b2780")
+    define v = Character('Все', color="#ffffff")
+    define author = Character('Автор', color="#FFFFFF")
+    define stud = Character('Студенты', сolor="#00eaff")
+    define o_v = Character('Ольга Владимировна', color="#fb6b1dff")
     define k_p = Character('Константин Алексеевич', color="#a6ff00")
 
     # Для NVl'a:
     define nvl_1 = Character(None, kind=nvl)
 
     #  Теги для анимированного текста
-    #  дефолт: b - жирный, i - курсив, \n - конец строки, u - подчеркивание, color=#FFFFFF - задать цвет, cps - скорость вывода текста
+    #  дефолт: b - жирный, i - курсив, \n - конец строки, u - подчеркивание, color=#FFFFFF - задать цвет, cps - скорость вывода текста, size - размер текста
     #  bt - текст волной (bt = 20 амплитуда высоты букв)
     #  fi - плавное появление текста (fi = 1-10-100, 1 параметр хз чо делает, 2 параметр время появления, 3 параметр расстояние)
     #  sc - дрожащий текст (sc = 20 задать дрожание)
@@ -29,7 +29,7 @@ init:
     #  explode - взрыв текста (explode = 5 задать время через которое произойдет взрыв(в секундах))
     #  explodehalf - сильный взрыв текста (explode = 0-2 центр и время разрыва)
     #  glitch - глючный текст (glitch = 50% процент глюка)
-    #  gradient - цвет1-цвет2 (градиент текст) 
+    #  gradient - цвет1-цвет2 (градиент текст)  
     
     # Курсор
     define config.mouse = {"default" : [("gui/cursor.png", 0, 0)]}
