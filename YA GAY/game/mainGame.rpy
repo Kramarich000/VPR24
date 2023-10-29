@@ -62,6 +62,8 @@ init:
     image OBSHAGA_VHOD = "bg/OBSHAGA_VHOD.jpg"
     image PARA_INFA = "bg/PARA_INFA.jpg"
     image CHILL = "bg/CHILL.jpg"
+    image TIME = "bg/TIME.jpg" 
+    image BALKON_OBSHAGA = "bg/BALKON_OBSHAGA.jpg"
 
     # Спрайты боряна:
     image BORYA_OUTSIDE = At("sprites/BORYA/BORYA_OUTSIDE.png", sprite_highlight("b"))
