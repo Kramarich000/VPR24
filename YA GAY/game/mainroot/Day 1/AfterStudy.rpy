@@ -1,4 +1,4 @@
-label D1M_CHILL:
+label D1AS_CHILL:
     scene CHILL
     with fade
     show GOGA_OUTSIDE at center
