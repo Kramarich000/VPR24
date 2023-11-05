@@ -4,7 +4,7 @@ label D1P3:
     show GOGA_OUTSIDE at center
     g "Не опоздали даже"
     hide GOGA_OUTSIDE
-    show kyperprizrak
+    show KIBERPRIZRAK
     with dissolve
     k_p "Итак, давайте начнем"
     "Ебать киберпризрак сасная девочка сука АХХАХАХАХХАХАХАХ"

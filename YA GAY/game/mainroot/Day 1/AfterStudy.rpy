@@ -1,4 +1,4 @@
-label D1M_CHILL:
+label D1AS_CHILL:
     scene CHILL
     with fade
     show GOGA_OUTSIDE at center
@@ -147,6 +147,7 @@ label D1M_CHILL:
 label D1M_OBSHAGA:
     show OBSHAGA_KUHNYA
     with fade
+    play music "music/Normal_Day.mp3"
     "Попрощавшись с Борей, Стас решил приготовить себе поесть"
     s "Так-так...{w}ага нашел!"
     s "Лапша быстрого приготовления это лучшее что придумало человечество"
@@ -157,15 +158,17 @@ label D1M_OBSHAGA:
     s "Ай ладно, сегодня был тяжелый день, мне можно"
     window hide
     show TIME
+    with fade
     pause
     show OBSHAGA
+    with fade
     "~ Фух, наигрался я ~"
     "~ Хм, интересно какой тут вид открывается на город ~"
     "~ На балконе я еще не был ~"
     "~ Надо посмотреть ~"
-    show BALKON_OBSHAGA
-    with dissolve
-    play music "music/dreams.mp3" fadein(1.0)
+    stop music fadeout(3.0)
+    show BALKON_OBSHAGA with dissolve
+    play music "music/evening.mp3"
     "~ Ого, а Ростов вечером очень даже ничего ~"
     "~ Эх, трудный день сегодня и вправду был, я познакомился со многими ребятами ~"
     "~ Боря{w}, Гоша{w}, Ваня{w}, Женя{w} ~"
@@ -183,9 +186,9 @@ label D1M_OBSHAGA:
     "~ ... ~"
     stop music
     "~ Хм, интересно, а долго ли...{w} {sc}{color=#ff0000ff}падать?{/color} ~"
-    "{sc}~ ...~{/sc}"
-    "{sc}~ ...~{/sc}"
-    "{sc}~ ...~{/sc}"
+    "{sc}~ ... ~{/sc}"
+    "{sc}~ ... ~{/sc}"
+    "{sc}~ ... ~{/sc}"
     "{sc}~ Ч-ч-то?{w}?{w}.{w}.{w}.{w}~{/sc}"
     "{sc}~ П-почему{w} у меня{w} возникла{w} эта{w} мысль?.{w}.{w}. {/sc}~"
     "{sc}~ Нет-нет-нет ~{/sc}"
