@@ -64,6 +64,7 @@ init:
     image CHILL = "bg/CHILL.jpg"
     image TIME = "bg/TIME.jpg" 
     image BALKON_OBSHAGA = "bg/BALKON_OBSHAGA.jpg"
+    image BALKON_DEPRESSION = "bg/BALKON_DEPRESSION.jpg"
 
     # Спрайты боряна:
     image BORYA_OUTSIDE = "sprites/BORYA/BORYA_OUTSIDE.png"

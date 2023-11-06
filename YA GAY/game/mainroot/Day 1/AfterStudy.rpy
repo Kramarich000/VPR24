@@ -24,7 +24,8 @@ label D1AS_CHILL:
     hide DIVAN_SMILE
     with dissolve
     b "Так, ну в общем раз уж пары закончились, то я в общагу"
-    show GOGA_OUTSIDE at center
+    show GOGA_OUTSIDE at left2
+    show BORYA_OUTSIDE at right2 
     with dissolve
     g "Слушай, Стас а ты тут квартиру снимаешь или в общаге?"
     s "Я из 10 общаги"
@@ -33,10 +34,12 @@ label D1AS_CHILL:
     b "Повтори то, что ты сейчас сказал"
     s "А...я из 10 общаги"
     b "Сосед!"
-    "Боря обнял Стаса"
+    hide BORYA_OUTSIDE
+    "Боря обнял Стаса" with hpunch
     s "Воу-воу полегче Боря ты мне ребра все переломаешь!"
     g "Ахахаха"
     g "Теперь не только одногруппники, а оказывается еще и соседи"
+    show BORYA_OUTSIDE at right2 with dissolve
     b "Круто, можно будет друг к другу в гости ходить, я тебе могу на гитаре сыграть"
     s "Буду ждать с нетерпением!"
     g "Ладно, соседи, я пойду, пока мою машину эвакуатор не забрал"
@@ -47,7 +50,7 @@ label D1AS_CHILL:
     g "Все побежал я давайте"
     s "Пока Гоша"
     b "Давай топай уже"
-    hide GOGA_OUTSIDE
+    hide GOGA_OUTSIDE with dissolve
     show BORYA_OUTSIDE at center
     with move
     b "Ну что, сосед"
@@ -167,7 +170,7 @@ label D1M_OBSHAGA:
     "~ На балконе я еще не был ~"
     "~ Надо посмотреть ~"
     stop music fadeout(3.0)
-    show BALKON_OBSHAGA with dissolve
+    scene BALKON_OBSHAGA with dissolve
     play music "music/evening.mp3"
     "~ Ого, а Ростов вечером очень даже ничего ~"
     "~ Эх, трудный день сегодня и вправду был, я познакомился со многими ребятами ~"
@@ -184,8 +187,10 @@ label D1M_OBSHAGA:
     "~ Надеюсь, все образуется ~"
     "~ А сейчас я должен сосредоточиться на учебе ~"
     "~ ... ~"
+    "~ Хм, интересно, а долго ли..."
     stop music
-    "~ Хм, интересно, а долго ли...{w} {sc}{color=#ff0000ff}падать?{/color} ~"
+    show BALKON_DEPRESSION
+    "~ Хм, интересно, а долго ли... {sc}{color=#ff0000ff}падать?{/color} ~"
     "{sc}~ ... ~{/sc}"
     "{sc}~ ... ~{/sc}"
     "{sc}~ ... ~{/sc}"
@@ -194,9 +199,16 @@ label D1M_OBSHAGA:
     "{sc}~ Нет-нет-нет ~{/sc}"
     play sound "sounds/tjazheloe-muzhskoe-dyhanie .mp3"
     "{sc}~ П-почему так{w} {color=#ff0000ff}страшно{w}.{w}.{w}.{/color}~{/sc}"
+    show BLACK_SCREEN with closed
+    hide BALKON_DEPRESSION
     play sound "sounds/odyshka-i-vosstanovlenie-dyhanija.mp3"
-    "~ Вдох-выдох{w}, вдох-выдох{w}, вдох-выдох{w}, ~"
+    "~ Вдох-выдох{w}, вдох-выдох{w}, вдох-выдох ~" with dissolve
+    hide BLACK_SCREEN 
+    show BALKON_OBSHAGA
+    with opened
     stop sound fadeout(2.0)
+    pause
+    "~ {w}.{w}.{w}.{w} ~"
     "~ Лучше прилечь, голова болит ~"
     return
     # Пора спать Стас...
