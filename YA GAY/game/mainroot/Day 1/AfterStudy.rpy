@@ -187,10 +187,10 @@ label D1M_OBSHAGA:
     "~ Надеюсь, все образуется ~"
     "~ А сейчас я должен сосредоточиться на учебе ~"
     "~ ... ~"
-    "~ Хм, интересно, а долго ли..."
     stop music
-    show BALKON_DEPRESSION
-    "~ Хм, интересно, а долго ли... {sc}{color=#ff0000ff}падать?{/color} ~"
+    "~ Хм, интересно, а долго ли... ~"
+    show BALKON_DEPRESSION 
+    "{sc}~ {color=#ff0000ff}падать? ~{/color}"
     "{sc}~ ... ~{/sc}"
     "{sc}~ ... ~{/sc}"
     "{sc}~ ... ~{/sc}"
@@ -210,5 +210,8 @@ label D1M_OBSHAGA:
     pause
     "~ {w}.{w}.{w}.{w} ~"
     "~ Лучше прилечь, голова болит ~"
-    return
-    # Пора спать Стас...
+    hide BALKON_OBSHAGA
+    show OBSHAGA_KUHNYA with closed
+    with fade
+    "~ Все будет хорошо ~"
+    hide OBSHAGA_KUHNYA with closed
