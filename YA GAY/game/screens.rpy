@@ -8,6 +8,22 @@ init offset = -1
 ################################################################################
 ## Стили
 ################################################################################
+## Бег
+init:
+    python:
+        def Traska(img):
+            renpy.show(img, tag="bg2", at_list=[traska(img)])
+                       
+    transform Run:
+        zoom 1.05anchor (48,27) 
+        ease 0.20pos (0, 0) 
+        ease 0.20pos (25,25) 
+        ease 0.20pos (0, 0) 
+        ease 0.20pos (-25,25) 
+        repeat
+
+
+
 
 style default:
     properties gui.text_properties()
