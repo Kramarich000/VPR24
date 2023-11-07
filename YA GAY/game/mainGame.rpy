@@ -64,30 +64,30 @@ init:
     image CHILL = "bg/CHILL.jpg"
 
     # Спрайты боряна:
-    image BORYA_OUTSIDE = At("sprites/BORYA/BORYA_OUTSIDE.png", sprite_highlight("b"))
+    image BORYA_OUTSIDE = "sprites/BORYA/BORYA_OUTSIDE.png"
     # Спрайты Гоги:
-    image GOGA_OUTSIDE = At("sprites/GOGA/GOGA_OUTSIDE.png", sprite_highlight("g"))
+    image GOGA_OUTSIDE = "sprites/GOGA/GOGA_OUTSIDE.png"
     # Спрайты Поркша:
-    image VPORKSHEYAN = At("sprites/PORKSH/VPORKSHEYAN.png", sprite_highlight("p"))
+    image VPORKSHEYAN = "sprites/PORKSH/VPORKSHEYAN.png"
     # Спрайты Никиты:
-    image NIKITA_OUTSIDE = At("sprites/NEKIT/NIKITA_OUTSIDE.png", sprite_highlight("n"))
+    image NIKITA_OUTSIDE = "sprites/NEKIT/NIKITA_OUTSIDE.png"
     # Спрайты Арины:
-    image ARINA_OUTSIDE = At("sprites/ARINA/ARINA_OUTSIDE.png", sprite_highlight("a"))
-    image ARINA_SUCCUB = At("sprites/ARINA/ARINA_SUCCUB.png", sprite_highlight("a_a"))
+    image ARINA_OUTSIDE = "sprites/ARINA/ARINA_OUTSIDE.png"
+    image ARINA_SUCCUB = "sprites/ARINA/ARINA_SUCCUB.png"
     # Спрайты Жени:
-    image ZHENYA_OUTSIDE = At("sprites/ZHENYA/ZHENYA_OUTSIDE.png", sprite_highlight("z"))
+    image ZHENYA_OUTSIDE = "sprites/ZHENYA/ZHENYA_OUTSIDE.png"
     # Спрайты Сереги:
-    image SEREGA = At("sprites/SEREGA/SEREGA.png", sprite_highlight("s_s"))
+    image SEREGA = "sprites/SEREGA/SEREGA.png"
     # Спрайты Вани:
-    image DIVAN_SERIOUS = At("sprites/DIVAN/DIVAN_SERIOUS.png", sprite_highlight("d"))
-    image DIVAN_CRY = At("sprites/DIVAN/DIVAN_CRY.png", sprite_highlight("d"))
-    image DIVAN_SMILE = At("sprites/DIVAN/DIVAN_SMILE.png", sprite_highlight("d"))
+    image DIVAN_SERIOUS = "sprites/DIVAN/DIVAN_SERIOUS.png"
+    image DIVAN_CRY = "sprites/DIVAN/DIVAN_CRY.png"
+    image DIVAN_SMILE = "sprites/DIVAN/DIVAN_SMILE.png"
 
     # Спрайты лысика:
     ######################
 
     # Спрайты Ивана Васильевича:
-    image IVAN_VASILIICH = At("sprites/IVAN_VASILIICH/IVAN_VASILIICH.png", sprite_highlight("i"))
+    image IVAN_VASILIICH = "sprites/IVAN_VASILIICH/IVAN_VASILIICH.png"
 
     # Статы:
     default HP = 5
@@ -120,6 +120,21 @@ init:
 # По подобному принципу можно создать свои собственные теги 
 # В такой ситуации НЕОБХОДИМО ПРОКОМЕНТИРОВАТЬ ЕГО ПЕРЕД НАЧАЛОМ СЦЕНЫ
 
-# Игра начинается здесь(пролог):
+image DISCLAIMER = "disclaimer.png"
+
+image splash = "splash.png"
+
+label splashscreen:
+    scene black 
+    with Pause(1)
+
+    show DISCLAIMER with Dissolve(2.0)
+    with Pause(3)
+    
+    scene black with Dissolve(2.0)
+    with Pause(1)
+
+    return
+
 label start:
     jump D1M_PROLOG
