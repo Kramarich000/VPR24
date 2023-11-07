@@ -123,6 +123,19 @@ init:
 # По подобному принципу можно создать свои собственные теги 
 # В такой ситуации НЕОБХОДИМО ПРОКОМЕНТИРОВАТЬ ЕГО ПЕРЕД НАЧАЛОМ СЦЕНЫ
 
-# Игра начинается здесь(пролог):
+image SPLASH = "splash.png"
+
+label splashscreen:
+    scene black 
+    with Pause(1)
+
+    show SPLASH with Dissolve(2.0)
+    with Pause(3)
+    
+    scene black with Dissolve(2.0)
+    with Pause(1)
+
+    return
+
 label start:
     jump D1M_PROLOG
