@@ -35,16 +35,14 @@ label D1P1:
         "Уснуть":
             p "Чтобы продемонстрировать вам..."
             $ uspevaemost -= 1
-            show BLACK_SCREEN 
-            with dissolve
+            show BLACK_SCREEN with closed
             "..."
             "..."
             "..."
             play sound "sounds/dgtu_zvon.mp3"
-            hide VPORKSHEYAN
-            hide BLACK_SCREEN
-            show PARA_L
-            with dissolve
+            hide BLACK_SCREEN with opened
+            p "Так, старосты мне списки отсутствующих и все свободны"
+            hide VPORKSHEYAN with dissolve
             s "Ой что уже все что-ли?"
         "Внимательно слушать":
             play music "sounds/DELTA_SHTRIX.mp3"
