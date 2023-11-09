@@ -18,7 +18,7 @@ define config.name = _("VPR24")
 ## Определяет, показывать ли заголовок, данный выше, на экране главного меню.
 ## Установите на False, чтобы спрятать заголовок.
 
-define gui.show_name = True
+define gui.show_name = False
 
 
 ## Версия игры.
@@ -89,7 +89,7 @@ define config.after_load_transition = None
 
 ## Используется при входе в главное меню после того, как игра закончится.
 
-define config.end_game_transition = None
+define config.end_game_transition = Dissolve(1.0)
 ## Плавное появление главного меню
 define config.end_splash_transition = Dissolve(2.0)
 
@@ -108,7 +108,7 @@ define config.end_splash_transition = Dissolve(2.0)
 ## После начала игры этот параметр можно изменить с помощью "window show",
 ## "window hide" и "window auto".
 
-define config.window = "auto"
+define config.window = "hide"
 
 
 ## Переходы, используемые при показе и скрытии диалогового окна
@@ -190,8 +190,9 @@ init python:
 
     ## Чтобы архивировать файлы, классифицируйте их, например, как 'archive'.
 
-    # build.classify('game/**.png', 'archive')
-    # build.classify('game/**.jpg', 'archive')
+    build.classify('images/**.png', 'archive')
+    build.classify('images/**.jpg', 'archive')
+    build.classify('images/**.mp4', 'archive')
 
     ## Файлы, соответствующие образцам документации, дублируются в приложениях
     ## Mac, чтобы они появлялись и в приложении, и в zip архиве.
