@@ -48,7 +48,7 @@ label D1M_PROLOG:
     "{size=+10}{b}БЕГОМ"
     "Стас взял пропуск и вышел из общаги"
     hide OBSHAGA
-    show NA_ULIZE
+    show NA_ULIZE at Run
     with dissolve
     stop music fadeout(2.0)
     play bgs "sounds/zvuki-na-ulice-goroda.mp3"

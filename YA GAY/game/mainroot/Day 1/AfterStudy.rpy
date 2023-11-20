@@ -213,7 +213,7 @@ label D1M_OBSHAGA:
     "~ {w}.{w}.{w}.{w} ~"
     "~ Лучше прилечь, голова болит ~"
     hide BALKON_OBSHAGA
-    show OBSHAGA_KUHNYA with closed
+    show OBSHAGA_KUHNYA
     with fade
     "~ Все будет хорошо ~"
-    hide OBSHAGA_KUHNYA with closed
+    "~ Утро вечера мудренее ~"
