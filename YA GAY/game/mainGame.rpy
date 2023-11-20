@@ -12,7 +12,6 @@ init:
     define s = Character('Стас', color="#F4A460")
     define i = Character('Иван Васильевич', сolor="#1b2780")
     define v = Character('Все', color="#ffffff")
-    define author = Character('', color="#FFFFFF")
     define stud = Character('Студенты', сolor="#ffffff")
     define o_v = Character('Ольга Владимировна', color="#fb6b1dff")
     define k_p = Character('Константин Алексеевич', color="#a6ff00")
