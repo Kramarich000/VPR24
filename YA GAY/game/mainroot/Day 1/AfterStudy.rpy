@@ -174,7 +174,7 @@ label D1M_OBSHAGA:
     play music "music/evening.mp3"
     "~ Ого, а Ростов вечером очень даже ничего ~"
     "~ Эх, трудный день сегодня и вправду был, я познакомился со многими ребятами ~"
-    "~ Боря{w}, Гоша{w}, Ваня{w}, Женя{w} ~"
+    "~ Боря{w}, Гоша{w}, Ваня{w}, Женя ~"
     "~ Только с последним у нас какая-то странная пауза была, но я думаю, возможно, потом мы познакомимся друг с другом получше ~"
     "~ ... ~"
     "~ А как там мама и папа? ~"
@@ -187,10 +187,11 @@ label D1M_OBSHAGA:
     "~ Надеюсь, все образуется ~"
     "~ А сейчас я должен сосредоточиться на учебе ~"
     "~ ... ~"
-    stop music
     "~ Хм, интересно, а долго ли... ~"
+    stop music
     show BALKON_DEPRESSION 
-    "{sc}~ {color=#ff0000ff}падать? ~{/color}"
+    "{sc}~ {color=#ff0000ff}падать? {/color}~"
+    play music "music/EPIC_SUKO.mp3" fadein (1.0)
     "{sc}~ ... ~{/sc}"
     "{sc}~ ... ~{/sc}"
     "{sc}~ ... ~{/sc}"
@@ -199,6 +200,7 @@ label D1M_OBSHAGA:
     "{sc}~ Нет-нет-нет ~{/sc}"
     play sound "sounds/tjazheloe-muzhskoe-dyhanie .mp3"
     "{sc}~ П-почему так{w} {color=#ff0000ff}страшно{w}.{w}.{w}.{/color}~{/sc}"
+    stop music fadeout(1.0)
     show BLACK_SCREEN with closed
     hide BALKON_DEPRESSION
     play sound "sounds/odyshka-i-vosstanovlenie-dyhanija.mp3"
