@@ -29,7 +29,7 @@ label D1P1:
     pause
     pause
     window show
-    "~ Не я не могу уже... Cкууука ~"
+    "~ Не я не могу уже... скууука ~"
     window hide
     menu:
         "Уснуть":
