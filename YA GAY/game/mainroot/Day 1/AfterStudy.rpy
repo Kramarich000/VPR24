@@ -190,6 +190,7 @@ label D1M_OBSHAGA:
     stop music
     "~ Хм, интересно, а долго ли... ~"
     show BALKON_DEPRESSION 
+    play music "music/scary2.mp3"
     "{sc}~ {color=#ff0000ff}падать? ~{/color}"
     "{sc}~ ... ~{/sc}"
     "{sc}~ ... ~{/sc}"
@@ -201,6 +202,7 @@ label D1M_OBSHAGA:
     "{sc}~ П-почему так{w} {color=#ff0000ff}страшно{w}.{w}.{w}.{/color}~{/sc}"
     show BLACK_SCREEN with closed
     hide BALKON_DEPRESSION
+    stop music fadeout(2.0)
     play sound "sounds/odyshka-i-vosstanovlenie-dyhanija.mp3"
     "~ Вдох-выдох{w}, вдох-выдох{w}, вдох-выдох ~" with dissolve
     hide BLACK_SCREEN 
@@ -215,3 +217,5 @@ label D1M_OBSHAGA:
     with fade
     "~ Все будет хорошо ~"
     "~ Утро вечера мудренее ~"
+    show BLACK_SCREEN with closed
+    jump D2M
